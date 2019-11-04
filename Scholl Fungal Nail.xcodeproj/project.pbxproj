@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		966631C7F792875FEA2E3160 /* Pods_Scholl_Fungal_Nail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D36F939530852D053F6C13E2 /* Pods_Scholl_Fungal_Nail.framework */; };
 		AA76E5502369D23D004322EE /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76E54F2369D23D004322EE /* ThirdViewController.swift */; };
 		AA76E5522369D24D004322EE /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76E5512369D24D004322EE /* FourthViewController.swift */; };
 		AA7C81E0236C873C004684C2 /* MyImageClassifier2 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AA7C81DF236C873C004684C2 /* MyImageClassifier2 1.mlmodel */; };
@@ -18,9 +19,13 @@
 		AA7CB2D72369C65B000CC249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA7CB2D52369C65B000CC249 /* LaunchScreen.storyboard */; };
 		AA8A863223701A8900F992E4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7CB2CC2369C659000CC249 /* HomeVC.swift */; };
 		AA8A8634237041CC00F992E4 /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8633237041CC00F992E4 /* ResultsVC.swift */; };
+		AA8A8636237063EA00F992E4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8635237063EA00F992E4 /* Result.swift */; };
+		AAF4E90D2370C7B5006CEB55 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4E90B2370C7B5006CEB55 /* CustomTableViewCell.swift */; };
+		AAF4E90E2370C7B5006CEB55 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF4E90C2370C7B5006CEB55 /* CustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CECE517FF7DE9A93DC87CEC /* Pods-Scholl Fungal Nail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scholl Fungal Nail.debug.xcconfig"; path = "Target Support Files/Pods-Scholl Fungal Nail/Pods-Scholl Fungal Nail.debug.xcconfig"; sourceTree = "<group>"; };
 		AA76E54F2369D23D004322EE /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		AA76E5512369D24D004322EE /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		AA7C81DF236C873C004684C2 /* MyImageClassifier2 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "MyImageClassifier2 1.mlmodel"; sourceTree = "<group>"; };
@@ -34,6 +39,11 @@
 		AA7CB2D62369C65B000CC249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA7CB2D82369C65B000CC249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA8A8633237041CC00F992E4 /* ResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultsVC.swift; path = ../../ResultsVC.swift; sourceTree = "<group>"; };
+		AA8A8635237063EA00F992E4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		AAF4E90B2370C7B5006CEB55 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = "Scholl Fungal Nail/CustomTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		AAF4E90C2370C7B5006CEB55 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomTableViewCell.xib; path = "Scholl Fungal Nail/CustomTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		D36F939530852D053F6C13E2 /* Pods_Scholl_Fungal_Nail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scholl_Fungal_Nail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC38B6246A125E8B3AFA5DF2 /* Pods-Scholl Fungal Nail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scholl Fungal Nail.release.xcconfig"; path = "Target Support Files/Pods-Scholl Fungal Nail/Pods-Scholl Fungal Nail.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966631C7F792875FEA2E3160 /* Pods_Scholl_Fungal_Nail.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B31A1662842CDEDD4C715C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D36F939530852D053F6C13E2 /* Pods_Scholl_Fungal_Nail.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A78F335DD8F8189914E552A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CECE517FF7DE9A93DC87CEC /* Pods-Scholl Fungal Nail.debug.xcconfig */,
+				EC38B6246A125E8B3AFA5DF2 /* Pods-Scholl Fungal Nail.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AA7CB2BC2369C659000CC249 = {
 			isa = PBXGroup;
 			children = (
 				AA7CB2C72369C659000CC249 /* Scholl Fungal Nail */,
 				AA7CB2C62369C659000CC249 /* Products */,
+				A78F335DD8F8189914E552A3 /* Pods */,
+				3B31A1662842CDEDD4C715C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +125,7 @@
 		AAEE62CA236C5FD700203FA5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AA8A8635237063EA00F992E4 /* Result.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -102,6 +133,8 @@
 		AAEE62CC236C600800203FA5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AAF4E90B2370C7B5006CEB55 /* CustomTableViewCell.swift */,
+				AAF4E90C2370C7B5006CEB55 /* CustomTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA7CB2DB2369C65B000CC249 /* Build configuration list for PBXNativeTarget "Scholl Fungal Nail" */;
 			buildPhases = (
+				43531E1FE53660B6C95BCA9D /* [CP] Check Pods Manifest.lock */,
 				AA7CB2C12369C659000CC249 /* Sources */,
 				AA7CB2C22369C659000CC249 /* Frameworks */,
 				AA7CB2C32369C659000CC249 /* Resources */,
+				3B1BC1735D6877A4BBB56B69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,22 +201,67 @@
 			files = (
 				AA7CB2D72369C65B000CC249 /* LaunchScreen.storyboard in Resources */,
 				AA7CB2D42369C65B000CC249 /* Assets.xcassets in Resources */,
+				AAF4E90E2370C7B5006CEB55 /* CustomTableViewCell.xib in Resources */,
 				AA7CB2D22369C659000CC249 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3B1BC1735D6877A4BBB56B69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Scholl Fungal Nail/Pods-Scholl Fungal Nail-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Scholl Fungal Nail/Pods-Scholl Fungal Nail-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Scholl Fungal Nail/Pods-Scholl Fungal Nail-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43531E1FE53660B6C95BCA9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Scholl Fungal Nail-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AA7CB2C12369C659000CC249 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA8A8636237063EA00F992E4 /* Result.swift in Sources */,
 				AA8A863223701A8900F992E4 /* HomeVC.swift in Sources */,
 				AA76E5522369D24D004322EE /* FourthViewController.swift in Sources */,
 				AA7CB2CF2369C659000CC249 /* SecondViewController.swift in Sources */,
 				AA76E5502369D23D004322EE /* ThirdViewController.swift in Sources */,
 				AA7C81E0236C873C004684C2 /* MyImageClassifier2 1.mlmodel in Sources */,
+				AAF4E90D2370C7B5006CEB55 /* CustomTableViewCell.swift in Sources */,
 				AA8A8634237041CC00F992E4 /* ResultsVC.swift in Sources */,
 				AA7CB2C92369C659000CC249 /* AppDelegate.swift in Sources */,
 				AA7CB2CB2369C659000CC249 /* SceneDelegate.swift in Sources */,
@@ -326,6 +406,7 @@
 		};
 		AA7CB2DC2369C65B000CC249 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CECE517FF7DE9A93DC87CEC /* Pods-Scholl Fungal Nail.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -344,6 +425,7 @@
 		};
 		AA7CB2DD2369C65B000CC249 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC38B6246A125E8B3AFA5DF2 /* Pods-Scholl Fungal Nail.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -9,8 +9,15 @@
 import UIKit
 import CoreML
 import Vision
+import RealmSwift
 
 class ResultsVC: UIViewController {
+
+    let realm = try! Realm()
+
+//    lazy var realm:Realm = {
+//        return try! Realm()
+//    }()
 
     var resultImage: UIImage?
 
@@ -20,6 +27,7 @@ class ResultsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         imageResult.image = resultImage
 
         guard let ciImage = CIImage(image: resultImage!) else {
@@ -45,13 +53,35 @@ class ResultsVC: UIViewController {
                 fatalError()
             }
 
-//            for r in results{
-//                let percent = Int(r.confidence * 100)
-//                print("\(r.identifier) \(percent)%")
-//            }
-
             self.resultTitle.text = results.first?.identifier
             self.resultAccuracy.text = String(accuracy * 100)
+
+            let x = self.realm.objects(Result.self).sorted(byKeyPath: "id", ascending: false)[0]
+            let highest = x.id
+            print(x.description)
+
+//            const lastUser = realmInstance.objects(UserData.get()).sorted('id', true)[0];
+//            const highestId = lastUser == null ? 0 : lastUser.id;
+//            user.id = highestId == null ? 1 : highestId + 1;
+
+            let result = Result()
+            result.id = highest + 1
+            result.resultClassification = results.first!.identifier
+            result.resultAccuracy = accuracy
+            result.dateAdded = Date()
+
+            guard let image = self.resultImage else { return }
+            //let data = NSData(data: image.jpegData(compressionQuality: 0.9)!)
+            let data = NSData(data: image.pngData()!)
+            result.image = data
+
+            do {
+                try self.realm.write {
+                    self.realm.add(result)
+                }
+            } catch {
+                print("Error saving context \(error)")
+            }
         }
 
         let handler = VNImageRequestHandler(ciImage: image)
@@ -63,8 +93,5 @@ class ResultsVC: UIViewController {
             print(error)
         }
     }
-
-    
-
 
 }

@@ -105,21 +105,50 @@
             </objects>
             <point key="canvasLocation" x="3773.913043478261" y="-715.17857142857144"/>
         </scene>
-        <!--Second-->
+        <!--History-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Scholl_Fungal_Nail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jaK-JG-0fM">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="6NO-vC-aBj">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6NO-vC-aBj" id="RPH-7M-3eA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="Dni-ot-0hN"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="J0d-UO-BMk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jaK-JG-0fM" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="4KU-gz-FIv"/>
+                            <constraint firstItem="jaK-JG-0fM" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="DFH-lE-8IR"/>
+                            <constraint firstItem="jaK-JG-0fM" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="IPO-uI-05Z"/>
+                            <constraint firstItem="jaK-JG-0fM" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="ZMA-ME-Vt8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" title="History" id="zjR-U7-Nk9"/>
+                    <connections>
+                        <outlet property="resultsHistory" destination="jaK-JG-0fM" id="LWR-vC-hOA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1687" y="0.0"/>
+            <point key="canvasLocation" x="2751" y="0.0"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -132,7 +161,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="bOU-sR-HD5" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="Vhl-PM-bme" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="QFO-tZ-mvX" kind="relationship" relationship="viewControllers" id="WJy-uu-jr0"/>
                         <segue destination="Mkq-Ne-eQO" kind="relationship" relationship="viewControllers" id="N01-xx-6EA"/>
                     </connections>
@@ -191,6 +220,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dV4-d3-Cge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1687" y="-715"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="Vex-0S-xdp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vhl-PM-bme" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NLL-yH-agO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="paC-7I-BS8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ceS-W4-d0h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686.9565217391305" y="0.0"/>
         </scene>
     </scenes>
     <resources>
