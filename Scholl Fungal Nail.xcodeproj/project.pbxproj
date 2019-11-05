@@ -22,6 +22,10 @@
 		AA8A8636237063EA00F992E4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8635237063EA00F992E4 /* Result.swift */; };
 		AAF4E90D2370C7B5006CEB55 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4E90B2370C7B5006CEB55 /* CustomTableViewCell.swift */; };
 		AAF4E90E2370C7B5006CEB55 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF4E90C2370C7B5006CEB55 /* CustomTableViewCell.xib */; };
+		AAF4E910237168A1006CEB55 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4E90F237168A1006CEB55 /* CustomCollectionViewCell.swift */; };
+		AAF4E9122371A02C006CEB55 /* ComplianceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4E9112371A02C006CEB55 /* ComplianceCollectionViewCell.swift */; };
+		AAF4E9142371C24E006CEB55 /* Compliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4E9132371C24E006CEB55 /* Compliance.swift */; };
+		AAF4E9162371C9E5006CEB55 /* CompareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4E9152371C9E5006CEB55 /* CompareVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		AA8A8635237063EA00F992E4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		AAF4E90B2370C7B5006CEB55 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = "Scholl Fungal Nail/CustomTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		AAF4E90C2370C7B5006CEB55 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomTableViewCell.xib; path = "Scholl Fungal Nail/CustomTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		AAF4E90F237168A1006CEB55 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCollectionViewCell.swift; path = "Scholl Fungal Nail/CustomCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		AAF4E9112371A02C006CEB55 /* ComplianceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComplianceCollectionViewCell.swift; path = "Scholl Fungal Nail/ComplianceCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		AAF4E9132371C24E006CEB55 /* Compliance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compliance.swift; sourceTree = "<group>"; };
+		AAF4E9152371C9E5006CEB55 /* CompareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompareVC.swift; path = "Scholl Fungal Nail/CompareVC.swift"; sourceTree = SOURCE_ROOT; };
 		D36F939530852D053F6C13E2 /* Pods_Scholl_Fungal_Nail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scholl_Fungal_Nail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC38B6246A125E8B3AFA5DF2 /* Pods-Scholl Fungal Nail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scholl Fungal Nail.release.xcconfig"; path = "Target Support Files/Pods-Scholl Fungal Nail/Pods-Scholl Fungal Nail.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +121,7 @@
 		AAEE62C9236C5FCA00203FA5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AAF4E9152371C9E5006CEB55 /* CompareVC.swift */,
 				AA7CB2CC2369C659000CC249 /* HomeVC.swift */,
 				AA8A8633237041CC00F992E4 /* ResultsVC.swift */,
 				AA7CB2CE2369C659000CC249 /* SecondViewController.swift */,
@@ -126,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				AA8A8635237063EA00F992E4 /* Result.swift */,
+				AAF4E9132371C24E006CEB55 /* Compliance.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,6 +143,8 @@
 		AAEE62CC236C600800203FA5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AAF4E9112371A02C006CEB55 /* ComplianceCollectionViewCell.swift */,
+				AAF4E90F237168A1006CEB55 /* CustomCollectionViewCell.swift */,
 				AAF4E90B2370C7B5006CEB55 /* CustomTableViewCell.swift */,
 				AAF4E90C2370C7B5006CEB55 /* CustomTableViewCell.xib */,
 			);
@@ -255,16 +267,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF4E9162371C9E5006CEB55 /* CompareVC.swift in Sources */,
 				AA8A8636237063EA00F992E4 /* Result.swift in Sources */,
 				AA8A863223701A8900F992E4 /* HomeVC.swift in Sources */,
 				AA76E5522369D24D004322EE /* FourthViewController.swift in Sources */,
 				AA7CB2CF2369C659000CC249 /* SecondViewController.swift in Sources */,
 				AA76E5502369D23D004322EE /* ThirdViewController.swift in Sources */,
 				AA7C81E0236C873C004684C2 /* MyImageClassifier2 1.mlmodel in Sources */,
+				AAF4E9142371C24E006CEB55 /* Compliance.swift in Sources */,
 				AAF4E90D2370C7B5006CEB55 /* CustomTableViewCell.swift in Sources */,
+				AAF4E9122371A02C006CEB55 /* ComplianceCollectionViewCell.swift in Sources */,
 				AA8A8634237041CC00F992E4 /* ResultsVC.swift in Sources */,
 				AA7CB2C92369C659000CC249 /* AppDelegate.swift in Sources */,
 				AA7CB2CB2369C659000CC249 /* SceneDelegate.swift in Sources */,
+				AAF4E910237168A1006CEB55 /* CustomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

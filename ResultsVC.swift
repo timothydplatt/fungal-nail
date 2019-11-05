@@ -58,11 +58,6 @@ class ResultsVC: UIViewController {
 
             let x = self.realm.objects(Result.self).sorted(byKeyPath: "id", ascending: false)[0]
             let highest = x.id
-            print(x.description)
-
-//            const lastUser = realmInstance.objects(UserData.get()).sorted('id', true)[0];
-//            const highestId = lastUser == null ? 0 : lastUser.id;
-//            user.id = highestId == null ? 1 : highestId + 1;
 
             let result = Result()
             result.id = highest + 1
