@@ -18,12 +18,25 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zja-AF-FfG">
                                 <rect key="frame" x="0.0" y="88" width="414" height="181.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3e-5Y-ES5">
+                                        <rect key="frame" x="161.5" y="75.5" width="91" height="30"/>
+                                        <state key="normal" title="See Progress"/>
+                                        <connections>
+                                            <action selector="seeProgressButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="VJK-1g-SCf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="i3e-5Y-ES5" firstAttribute="centerX" secondItem="zja-AF-FfG" secondAttribute="centerX" id="2uA-Qx-MNI"/>
+                                    <constraint firstItem="i3e-5Y-ES5" firstAttribute="centerY" secondItem="zja-AF-FfG" secondAttribute="centerY" id="6SU-N7-QRP"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koA-Gq-wHo">
                                 <rect key="frame" x="0.0" y="269.5" width="414" height="181"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pNw-lV-26w">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pNw-lV-26w">
                                         <rect key="frame" x="8" y="8" width="398" height="165"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hAT-Wc-59E">
@@ -80,19 +93,23 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTZ-Ri-50S">
                                 <rect key="frame" x="0.0" y="450.5" width="414" height="181.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFj-7q-PBl">
-                                        <rect key="frame" x="162" y="76" width="91" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="See Progress"/>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLO-RQ-I3h">
+                                        <rect key="frame" x="10" y="10" width="394" height="162"/>
                                         <connections>
-                                            <action selector="compareButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="QuQ-jc-JyW"/>
+                                            <segue destination="AN6-J6-LQe" kind="embed" identifier="embedChildSegue" id="THM-Cr-aQ5"/>
                                         </connections>
-                                    </button>
+                                    </containerView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="kLO-RQ-I3h" secondAttribute="trailing" constant="10" id="K6Z-Tk-iro"/>
+                                    <constraint firstItem="kLO-RQ-I3h" firstAttribute="leading" secondItem="cTZ-Ri-50S" secondAttribute="leading" constant="10" id="hza-eP-WRU"/>
+                                    <constraint firstAttribute="bottom" secondItem="kLO-RQ-I3h" secondAttribute="bottom" constant="10" id="lVo-fT-fnj"/>
+                                    <constraint firstItem="kLO-RQ-I3h" firstAttribute="top" secondItem="cTZ-Ri-50S" secondAttribute="top" constant="10" id="zhA-FV-4Yp"/>
+                                </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="koA-Gq-wHo" firstAttribute="height" secondItem="PQr-Ze-W5v" secondAttribute="height" multiplier="0.25" id="280-bX-HSv"/>
                             <constraint firstItem="zja-AF-FfG" firstAttribute="height" secondItem="PQr-Ze-W5v" secondAttribute="height" multiplier="0.25" id="6EO-Cf-zV8"/>
@@ -263,7 +280,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jaK-JG-0fM" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="4KU-gz-FIv"/>
                             <constraint firstItem="jaK-JG-0fM" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="DFH-lE-8IR"/>
@@ -281,11 +298,11 @@
             </objects>
             <point key="canvasLocation" x="2751" y="0.0"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Circle Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                <tabBarController id="49e-Tb-3d3" customClass="SHCircleBarController" customModule="CircleBar" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA" customClass="SHCircleBar" customModule="CircleBar">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -301,23 +318,23 @@
             </objects>
             <point key="canvasLocation" x="146" y="0.0"/>
         </scene>
-        <!--Third-->
+        <!--Pharmacies-->
         <scene sceneID="Vbe-Da-PuV">
             <objects>
                 <viewController id="QFO-tZ-mvX" customClass="ThirdViewController" customModule="Scholl_Fungal_Nail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IME-Fj-aou">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="NG0-pP-GM9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Third" image="triangle.fill" catalog="system" id="QqK-B0-HuC"/>
+                    <tabBarItem key="tabBarItem" title="Pharmacies" image="pinFilled" id="QqK-B0-HuC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZq-ok-tWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1687" y="733"/>
         </scene>
-        <!--Fourth-->
+        <!--Treatments-->
         <scene sceneID="Cmm-0g-ZEf">
             <objects>
                 <viewController id="Mkq-Ne-eQO" customClass="FourthViewController" customModule="Scholl_Fungal_Nail" customModuleProvider="target" sceneMemberID="viewController">
@@ -325,10 +342,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7XB-yN-u72">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7XB-yN-u72">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="10" id="Y9y-Fe-5Iw">
                                     <size key="itemSize" width="349" height="250"/>
                                     <size key="estimatedItemSize" width="370" height="250"/>
@@ -379,20 +396,20 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="KxE-RD-SRg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Fourth" image="star.fill" catalog="system" id="U3W-bI-SQ4"/>
+                    <tabBarItem key="tabBarItem" title="Treatments" image="doseFilled" id="U3W-bI-SQ4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwm-hQ-TUw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1686.9565217391305" y="1485.9375"/>
         </scene>
-        <!--First-->
+        <!--Home-->
         <scene sceneID="Axo-rc-pEc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bOU-sR-HD5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="homeFilled" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fHX-bG-urU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -407,11 +424,11 @@
             </objects>
             <point key="canvasLocation" x="1687" y="-715"/>
         </scene>
-        <!--Second-->
+        <!--History-->
         <scene sceneID="Vex-0S-xdp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vhl-PM-bme" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="History" image="listFilled" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NLL-yH-agO">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -426,14 +443,35 @@
             </objects>
             <point key="canvasLocation" x="1686.9565217391305" y="0.0"/>
         </scene>
+        <!--ChildVC-->
+        <scene sceneID="bTW-2M-miG">
+            <objects>
+                <viewController id="AN6-J6-LQe" customClass="ChildVC" customModule="Scholl_Fungal_Nail" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sxz-j1-nGu">
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="162"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="Xca-5I-Jgq">
+                                <rect key="frame" x="77" y="14" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oPd-xf-Ffu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3787" y="-230"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="3" width="5226" height="3648"/>
         <image name="Checkbox" width="60" height="60"/>
         <image name="UnCheckbox" width="60" height="60"/>
         <image name="camera" catalog="system" width="64" height="48"/>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
-        <image name="star.fill" catalog="system" width="64" height="58"/>
-        <image name="triangle.fill" catalog="system" width="64" height="56"/>
+        <image name="doseFilled" width="25" height="25"/>
+        <image name="homeFilled" width="25" height="25"/>
+        <image name="listFilled" width="25" height="25"/>
+        <image name="pinFilled" width="25" height="25"/>
     </resources>
 </document>

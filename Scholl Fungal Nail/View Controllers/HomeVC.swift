@@ -24,13 +24,12 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         present(imagePicker, animated: true, completion: nil)
     }
 
-
-    @IBAction func compareButton(_ sender: UIButton) {
-
+    @IBAction func seeProgressButton(_ sender: Any) {
     }
 
+
     @IBAction func editButtonTapped(sender : UIButton){
-        print(sender.tag)
+        //print(sender.tag)
         UIView.animate(withDuration: 0.2, delay: 0.1, options: .curveLinear, animations: {
             sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
         }) { (success) in
@@ -44,7 +43,7 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        //print(Realm.Configuration.defaultConfiguration.fileURL!)
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         imagePicker.allowsEditing = false
@@ -90,7 +89,6 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("NewTest")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "complianceCell", for: indexPath) as! ComplianceCollectionViewCell
 
         //cell.complianceButton.imageView?.image = buttonImages[indexPath.row]
@@ -110,7 +108,7 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     func buttonAction(sender : UIButton) {
 
        var selectedButtonCell = sender.superview as! ComplianceCollectionViewCell
-        print(selectedButtonCell)
+        //print(selectedButtonCell)
     }
 
 
@@ -132,6 +130,11 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
                 return
             }
             viewController.resultImage = selectedImage
+        } else if segue.identifier == "embedChildSegue" {
+          if let childVC = segue.destination as? ChildVC {
+            //Some property on ChildVC that needs to be set
+            //childVC.dataSource = self
+          }
         }
     }
 
