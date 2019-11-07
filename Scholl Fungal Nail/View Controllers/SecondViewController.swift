@@ -35,7 +35,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     //MARK: - TableView Datasource Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Array Count: \(String(describing: categoryArray?.count))")
+        //print("Array Count: \(String(describing: categoryArray?.count))")
         return categoryArray?.count ?? 1
     }
 
@@ -47,6 +47,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell?.cellTitle.text = category.resultClassification
             cell?.cellSubTitle.text = String(category.resultAccuracy)
             cell?.cellImage.image = UIImage(data: category.image as! Data)
+            cell?.cellImage.makeRounded()
 
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MMM dd, yyyy"
@@ -60,25 +61,43 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
 
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//
-//        let cell = tableView(tableView, cellForRowAt: indexPath)
-//
-//        if let category = categoryArray?[indexPath.row] {
-//
-//            cell.textLabel?.text = category.name ?? "No categories added yet."
-//
-//            guard let categoryColour = UIColor(hexString: category.colour ?? "1D9BF6") else { fatalError()}
-//
-//            cell.backgroundColor = categoryColour
-//
-//            cell.textLabel?.textColor = ContrastColorOf(categoryColour, returnFlat: true)
-//
-//        }
-//
-//        return cell
-//    }
+    //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    //
+    //
+    //        let cell = tableView(tableView, cellForRowAt: indexPath)
+    //
+    //        if let category = categoryArray?[indexPath.row] {
+    //
+    //            cell.textLabel?.text = category.name ?? "No categories added yet."
+    //
+    //            guard let categoryColour = UIColor(hexString: category.colour ?? "1D9BF6") else { fatalError()}
+    //
+    //            cell.backgroundColor = categoryColour
+    //
+    //            cell.textLabel?.textColor = ContrastColorOf(categoryColour, returnFlat: true)
+    //
+    //        }
+    //
+    //        return cell
+    //    }
 
 }
 
+extension UIImageView {
+
+    func makeRounded() {
+        self.layer.borderWidth = 0.5
+        self.layer.masksToBounds = false
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.cornerRadius = self.frame.height / 2
+        self.clipsToBounds = true
+    }
+
+//    func maskCircle(anyImage: UIImage) {
+//        self.contentMode = UIView.ContentMode.scaleAspectFill
+//        self.layer.cornerRadius = self.frame.height / 2
+//        self.layer.masksToBounds = false
+//        self.clipsToBounds = true
+//        self.image = anyImage
+//    }
+}

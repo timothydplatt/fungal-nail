@@ -8,5 +8,6 @@ target 'Scholl Fungal Nail' do
   # Pods for Scholl Fungal Nail
   pod 'RealmSwift'
   pod 'CircleBar'
+  pod 'SwiftLint'
 
 end
