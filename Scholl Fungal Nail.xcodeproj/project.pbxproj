@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		966631C7F792875FEA2E3160 /* Pods_Scholl_Fungal_Nail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D36F939530852D053F6C13E2 /* Pods_Scholl_Fungal_Nail.framework */; };
+		AA0843352374D8F2002772AD /* TreatmentTrackerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0843332374D8F2002772AD /* TreatmentTrackerCollectionViewCell.swift */; };
+		AA0843362374D8F2002772AD /* TreatmentTrackerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0843342374D8F2002772AD /* TreatmentTrackerCollectionViewCell.xib */; };
 		AA5332A72371F47700D5A9D1 /* ChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5332A62371F47700D5A9D1 /* ChildVC.swift */; };
 		AA6AC4AF23742436003E7C71 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AC4AE23742436003E7C71 /* LocationTableViewCell.swift */; };
 		AA76E5502369D23D004322EE /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76E54F2369D23D004322EE /* ThirdViewController.swift */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		2CECE517FF7DE9A93DC87CEC /* Pods-Scholl Fungal Nail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scholl Fungal Nail.debug.xcconfig"; path = "Target Support Files/Pods-Scholl Fungal Nail/Pods-Scholl Fungal Nail.debug.xcconfig"; sourceTree = "<group>"; };
+		AA0843332374D8F2002772AD /* TreatmentTrackerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TreatmentTrackerCollectionViewCell.swift; path = "Scholl Fungal Nail/TreatmentTrackerCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		AA0843342374D8F2002772AD /* TreatmentTrackerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TreatmentTrackerCollectionViewCell.xib; path = "Scholl Fungal Nail/TreatmentTrackerCollectionViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		AA5332A62371F47700D5A9D1 /* ChildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildVC.swift; sourceTree = SOURCE_ROOT; };
 		AA6AC4AE23742436003E7C71 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		AA76E54F2369D23D004322EE /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 		AAEE62CC236C600800203FA5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AA0843332374D8F2002772AD /* TreatmentTrackerCollectionViewCell.swift */,
+				AA0843342374D8F2002772AD /* TreatmentTrackerCollectionViewCell.xib */,
 				AAF4E9112371A02C006CEB55 /* ComplianceCollectionViewCell.swift */,
 				AAF4E90F237168A1006CEB55 /* CustomCollectionViewCell.swift */,
 				AA6AC4AE23742436003E7C71 /* LocationTableViewCell.swift */,
@@ -218,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA7CB2D72369C65B000CC249 /* LaunchScreen.storyboard in Resources */,
+				AA0843362374D8F2002772AD /* TreatmentTrackerCollectionViewCell.xib in Resources */,
 				AA7CB2D42369C65B000CC249 /* Assets.xcassets in Resources */,
 				AAF4E90E2370C7B5006CEB55 /* CustomTableViewCell.xib in Resources */,
 				AA7CB2D22369C659000CC249 /* Main.storyboard in Resources */,
@@ -289,6 +296,7 @@
 				AA7CB2C92369C659000CC249 /* AppDelegate.swift in Sources */,
 				AA7CB2CB2369C659000CC249 /* SceneDelegate.swift in Sources */,
 				AAF4E910237168A1006CEB55 /* CustomCollectionViewCell.swift in Sources */,
+				AA0843352374D8F2002772AD /* TreatmentTrackerCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
