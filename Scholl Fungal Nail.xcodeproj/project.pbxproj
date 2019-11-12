@@ -24,6 +24,9 @@
 		AA8A863223701A8900F992E4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7CB2CC2369C659000CC249 /* HomeVC.swift */; };
 		AA8A8634237041CC00F992E4 /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8633237041CC00F992E4 /* ResultsVC.swift */; };
 		AA8A8636237063EA00F992E4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8635237063EA00F992E4 /* Result.swift */; };
+		AADD48BF237AE460008E4491 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD48BE237AE460008E4491 /* QuizVC.swift */; };
+		AADD48C1237AEA34008E4491 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD48C0237AEA34008E4491 /* Question.swift */; };
+		AADD48C3237AEA54008E4491 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD48C2237AEA54008E4491 /* QuestionBank.swift */; };
 		AAF4E90D2370C7B5006CEB55 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4E90B2370C7B5006CEB55 /* CustomTableViewCell.swift */; };
 		AAF4E90E2370C7B5006CEB55 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF4E90C2370C7B5006CEB55 /* CustomTableViewCell.xib */; };
 		AAF4E910237168A1006CEB55 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF4E90F237168A1006CEB55 /* CustomCollectionViewCell.swift */; };
@@ -52,6 +55,9 @@
 		AA7CB2D82369C65B000CC249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA8A8633237041CC00F992E4 /* ResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultsVC.swift; path = ../../ResultsVC.swift; sourceTree = "<group>"; };
 		AA8A8635237063EA00F992E4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		AADD48BE237AE460008E4491 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuizVC.swift; path = "Scholl Fungal Nail/QuizVC.swift"; sourceTree = SOURCE_ROOT; };
+		AADD48C0237AEA34008E4491 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Question.swift; path = "Scholl Fungal Nail/View Controllers/Question.swift"; sourceTree = SOURCE_ROOT; };
+		AADD48C2237AEA54008E4491 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		AAF4E90B2370C7B5006CEB55 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = "Scholl Fungal Nail/CustomTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		AAF4E90C2370C7B5006CEB55 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomTableViewCell.xib; path = "Scholl Fungal Nail/CustomTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		AAF4E90F237168A1006CEB55 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCollectionViewCell.swift; path = "Scholl Fungal Nail/CustomCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
@@ -129,6 +135,7 @@
 		AAEE62C9236C5FCA00203FA5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AADD48BE237AE460008E4491 /* QuizVC.swift */,
 				AA7CB2CC2369C659000CC249 /* HomeVC.swift */,
 				AA5332A62371F47700D5A9D1 /* ChildVC.swift */,
 				AAF4E9152371C9E5006CEB55 /* CompareVC.swift */,
@@ -143,6 +150,8 @@
 		AAEE62CA236C5FD700203FA5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AADD48C0237AEA34008E4491 /* Question.swift */,
+				AADD48C2237AEA54008E4491 /* QuestionBank.swift */,
 				AA8A8635237063EA00F992E4 /* Result.swift */,
 				AAF4E9132371C24E006CEB55 /* Compliance.swift */,
 			);
@@ -293,6 +302,9 @@
 				AAF4E90D2370C7B5006CEB55 /* CustomTableViewCell.swift in Sources */,
 				AAF4E9122371A02C006CEB55 /* ComplianceCollectionViewCell.swift in Sources */,
 				AA8A8634237041CC00F992E4 /* ResultsVC.swift in Sources */,
+				AADD48C3237AEA54008E4491 /* QuestionBank.swift in Sources */,
+				AADD48C1237AEA34008E4491 /* Question.swift in Sources */,
+				AADD48BF237AE460008E4491 /* QuizVC.swift in Sources */,
 				AA7CB2C92369C659000CC249 /* AppDelegate.swift in Sources */,
 				AA7CB2CB2369C659000CC249 /* SceneDelegate.swift in Sources */,
 				AAF4E910237168A1006CEB55 /* CustomCollectionViewCell.swift in Sources */,

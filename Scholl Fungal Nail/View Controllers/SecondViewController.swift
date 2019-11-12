@@ -43,7 +43,6 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? CustomTableViewCell
 
         if let category = categoryArray?[indexPath.row] {
-            //cell?.cellImage = category.res
             cell?.cellTitle.text = category.resultClassification
             cell?.cellSubTitle.text = String(category.resultAccuracy)
             cell?.cellImage.image = UIImage(data: category.image as! Data)

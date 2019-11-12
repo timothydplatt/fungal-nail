@@ -14,11 +14,30 @@ class ThirdViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBAction func segmentControllerChanged(_ sender: UISegmentedControl) {
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            searchString = "Pharmacy"
+            locationArray.removeAll()
+            searchInMap()
+        //print("First Segment Selected")
+        case 1:
+            //print("Second Segment Selected")
+            searchString = "Doctors"
+            locationArray.removeAll()
+            searchInMap()
+        default:
+            break
+        }
+    }
     
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 2000
     var previousLocation: CLLocation?
     var locationArray: [MKMapItem?] = []
+    var searchString = "Pharmacy"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +100,8 @@ class ThirdViewController: UIViewController {
 
     func searchInMap() {
         let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery = "Pharmacy"
+        print(searchString)
+        request.naturalLanguageQuery = searchString
 
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         request.region = MKCoordinateRegion(center: previousLocation!.coordinate, span: span)
@@ -91,7 +111,7 @@ class ThirdViewController: UIViewController {
             for item in response!.mapItems {
                 self.locationArray.append(item)
                 self.addPinToMapView(title: item.name, latitude: item.placemark.location!.coordinate.latitude, longitude: item.placemark.location!.coordinate.longitude)
-                            }
+            }
 
             self.tableView.reloadData()
         }
@@ -103,7 +123,6 @@ class ThirdViewController: UIViewController {
             let annotation = MKPointAnnotation()
             annotation.coordinate = location
             annotation.title = title
-
             mapView.addAnnotation(annotation)
         }
     }
@@ -156,8 +175,7 @@ extension ThirdViewController: MKMapViewDelegate {
             let streetNumber = placemark.subThoroughfare ?? ""
             let streetName = placemark.thoroughfare ?? ""
 
-
-                //self?.addressLavel.text = "\(streetNumber) \(streetName)"
+            //self?.addressLavel.text = "\(streetNumber) \(streetName)"
 
         }
     }
@@ -175,8 +193,14 @@ extension ThirdViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath) as? LocationTableViewCell
 
         cell?.locationLabel.text = locationArray[indexPath.row]?.name
-        //print("Table Cell Called \(locationArray[indexPath.row]?.name)")
-
+        cell?.phoneNumberLabel.text = locationArray[indexPath.row]?.phoneNumber
+        cell?.urlNumberLabel.text = locationArray[indexPath.row]?.url?.path
+//        locationArray[indexPath.row]?.openInMaps(launchOptions: [String : Any]?)
+        print(locationArray[indexPath.row]?.placemark.title)
+        //print(locationArray[indexPath.row]?.placemark.subtitle)
+//        print(locationArray[indexPath.row]?.placemark.countryCode)
+//        print(locationArray[indexPath.row]?.placemark.coordinate)
+//        print(locationArray[indexPath.row]?.pointOfInterestCategory)
         return cell!
     }
     

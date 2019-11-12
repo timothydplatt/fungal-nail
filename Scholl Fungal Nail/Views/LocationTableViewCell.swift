@@ -11,6 +11,9 @@ import UIKit
 class LocationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var urlNumberLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
