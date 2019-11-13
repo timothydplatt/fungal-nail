@@ -10,5 +10,6 @@ target 'Scholl Fungal Nail' do
   pod 'CircleBar'
   pod 'SwiftLint'
   pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
+  pod 'lottie-ios'
 
 end

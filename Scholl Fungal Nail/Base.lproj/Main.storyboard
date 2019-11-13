@@ -609,6 +609,7 @@ It is important to ensure you look after your nails properly and practise good f
                     <navigationItem key="navigationItem" id="nZI-ob-lgK"/>
                     <connections>
                         <outlet property="progressBar" destination="aqP-LH-JMf" id="vPl-m5-yes"/>
+                        <outlet property="progressBarWidth" destination="sh2-Oq-H7l" id="loO-QW-2yv"/>
                         <outlet property="progressLabel" destination="aN8-7X-yjm" id="ZDO-wI-9rK"/>
                         <outlet property="questionLabel" destination="Cvf-aP-7ih" id="xP2-MG-LfJ"/>
                         <outlet property="scoreLabel" destination="KiO-sc-qb6" id="o1v-sQ-c0n"/>
@@ -852,6 +853,21 @@ It is important to ensure you look after your nails properly and practise good f
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwm-hQ-TUw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1686.9565217391305" y="1485.9375"/>
+        </scene>
+        <!--LottieVC-->
+        <scene sceneID="IIH-tu-Jgj">
+            <objects>
+                <viewController id="D8w-Tj-Xnh" customClass="LottieVC" customModule="Scholl_Fungal_Nail" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r83-hc-Dvg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="vR5-al-csf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eIr-E5-Tyy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2439" y="1486"/>
         </scene>
         <!--Home-->
         <scene sceneID="Axo-rc-pEc">

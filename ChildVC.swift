@@ -73,7 +73,7 @@ class ChildVC: UIViewController {
             self.visualizationWidth.constant += 250
             //self.visualizationView.transform = CGAffineTransform(translationX: -50, y: 50)
         }) { (complete) in
-            print("amen")
+//            print("amen")
         }
 
         visualizationView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
