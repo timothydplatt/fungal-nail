@@ -30,6 +30,16 @@ class ChildVC: UIViewController {
     @IBOutlet weak var visualizationWidth: NSLayoutConstraint!
     @IBOutlet weak var visualizatonHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var animatedView: UIView!
+    
+    @IBOutlet weak var animatedViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var animatedViewHeight: NSLayoutConstraint!
+
+    @IBAction func ViewMoreButton(_ sender: UIButton) {
+        animation(2)
+    }
+
+    
     
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {
@@ -37,8 +47,9 @@ class ChildVC: UIViewController {
         self.registerCollectionViewCells()
         dateMinusSeven = Calendar.current.date(byAdding: .day, value: -7, to: date)
         updateDatabaseArray()
-        updatePercentageViewSize(3)
+        //updatePercentageViewSize(3)
         dateFormatter.dateFormat = "EEEE"
+        animatedView.layer.cornerRadius = animatedView.frame.size.width/2
         roundLabelViewRadius()
         //print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
@@ -67,18 +78,45 @@ class ChildVC: UIViewController {
     }
 
     func updatePercentageViewSize(_ streak: Int) {
-        //let multiplier = CGFloat(streak/7)
+
+        //        //let multiplier = CGFloat(streak/7)
+        //        print("Streak \(streak)")
         UIView.animate(withDuration: 1.0, animations: {
             self.visualizationView.frame.size.width += 50
             self.visualizationWidth.constant += 250
             //self.visualizationView.transform = CGAffineTransform(translationX: -50, y: 50)
         }) { (complete) in
-//            print("amen")
+            //            print("amen")
         }
 
         visualizationView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         visualizationView.layer.cornerRadius = (visualizationView.layer.frame.size.width/2)
         visualizationView.clipsToBounds = true
+    }
+
+    func animation(_ multipler: Int){
+
+        animatedViewWidth.constant = (self.view.frame.width/7)*(CGFloat(multipler*2))
+        animatedViewHeight.constant = (self.view.frame.width/7)*(CGFloat(multipler*2))
+
+        UIView.animate(withDuration: 1.0,
+                       delay: 0,
+                       options: .curveEaseIn,
+                       animations: {
+                        self.view.layoutIfNeeded()
+        },
+                       completion: { finished in
+        })
+
+        let animation = CABasicAnimation(keyPath: "cornerRadius")
+        animation.duration = 1.0
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+        animation.fromValue = animatedView.layer.cornerRadius
+        animation.toValue = (self.view.frame.width/7)*(CGFloat(multipler))
+        animatedView.layer.add(animation, forKey: nil)
+        //update model important
+        animatedView.layer.cornerRadius = ((self.view.frame.width/7)*CGFloat(multipler))
+        //animatedView.clipsToBounds = true
     }
 }
 

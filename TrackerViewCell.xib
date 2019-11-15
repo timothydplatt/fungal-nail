@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="TrackerViewCell" customModule="Scholl_Fungal_Nail" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXd-3N-e6F">
+                        <rect key="frame" x="15" y="0.0" width="20" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="pAZ-BZ-jUO"/>
+                            <constraint firstAttribute="width" constant="20" id="tgf-cZ-5zi"/>
+                        </constraints>
+                        <state key="normal" image="circle" catalog="system"/>
+                        <state key="selected" image="checkmark" catalog="system"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGY-KG-ep4">
+                        <rect key="frame" x="12" y="36" width="26.5" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="26.5" id="ZVR-DI-Bmi"/>
+                            <constraint firstAttribute="height" constant="12" id="mda-fO-T8N"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="EXd-3N-e6F" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Gkn-IC-lAr"/>
+                <constraint firstAttribute="bottom" secondItem="uGY-KG-ep4" secondAttribute="bottom" constant="2" id="XMH-aD-2OU"/>
+                <constraint firstItem="uGY-KG-ep4" firstAttribute="top" secondItem="EXd-3N-e6F" secondAttribute="bottom" id="sZz-CX-1D2"/>
+                <constraint firstItem="uGY-KG-ep4" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="vTH-wQ-L3x"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="50" height="50"/>
+            <connections>
+                <outlet property="trackerButton" destination="EXd-3N-e6F" id="VB0-sb-qGO"/>
+                <outlet property="trackerLabel" destination="uGY-KG-ep4" id="Enl-p3-Vto"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="checkmark" catalog="system" width="64" height="56"/>
+        <image name="circle" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
