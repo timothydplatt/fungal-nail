@@ -964,7 +964,8 @@ It is important to ensure you look after your nails properly and practise good f
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yo4-eQ-o9W">
-                                <rect key="frame" x="275.5" y="141" width="73" height="30"/>
+                                <rect key="frame" x="271.5" y="138" width="77" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="View More"/>
                                 <connections>
                                     <action selector="ViewMoreButton:" destination="AN6-J6-LQe" eventType="touchUpInside" id="7bh-Io-fge"/>
@@ -1232,36 +1233,31 @@ It is important to ensure you look after your nails properly and practise good f
                                             <constraint firstAttribute="height" constant="50" id="jqN-zm-oz9"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyu-zK-LNR">
-                                        <rect key="frame" x="21" y="14.5" width="8" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyu-zK-LNR">
+                                        <rect key="frame" x="0.0" y="16.5" width="9" height="19"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="T6B-7o-L85" firstAttribute="centerY" secondItem="l1w-BW-bLR" secondAttribute="centerY" id="1z8-5N-GhY"/>
-                                    <constraint firstItem="Zyu-zK-LNR" firstAttribute="centerY" secondItem="l1w-BW-bLR" secondAttribute="centerY" id="AGB-jz-xt2"/>
                                     <constraint firstAttribute="height" constant="50" id="D8v-br-vre"/>
                                     <constraint firstAttribute="width" constant="50" id="Frh-uy-K4M"/>
-                                    <constraint firstItem="Zyu-zK-LNR" firstAttribute="centerX" secondItem="l1w-BW-bLR" secondAttribute="centerX" id="lOj-i4-USM"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zyu-zK-LNR" secondAttribute="bottom" constant="14.5" id="QKQ-N7-fBj"/>
+                                    <constraint firstItem="Zyu-zK-LNR" firstAttribute="leading" secondItem="l1w-BW-bLR" secondAttribute="leading" id="hfl-Fm-q80"/>
                                     <constraint firstItem="T6B-7o-L85" firstAttribute="centerX" secondItem="l1w-BW-bLR" secondAttribute="centerX" id="q4B-zz-bjv"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8H-ux-DVD">
-                                <rect key="frame" x="15" y="15" width="364" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treatment Tracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8H-ux-DVD">
+                                <rect key="frame" x="15" y="15" width="364" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gV5-qm-aw4">
-                                <rect key="frame" x="328" y="154" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d9B-pP-8Tj">
-                                <rect key="frame" x="15" y="46" width="364" height="88.5"/>
+                                <rect key="frame" x="15" y="51" width="364" height="83.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XXr-tC-SOg">
                                     <size key="itemSize" width="50" height="50"/>
@@ -1271,19 +1267,26 @@ It is important to ensure you look after your nails properly and practise good f
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="trackerCell" id="nFv-ww-ngX" customClass="TrackerViewCell" customModule="Scholl_Fungal_Nail" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="19.5" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="17" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gam-db-3dV">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gV5-qm-aw4">
+                                <rect key="frame" x="301" y="154.5" width="73" height="30"/>
+                                <state key="normal" title="View More"/>
+                                <connections>
+                                    <action selector="viewMoreButton:" destination="QyY-9e-Tjc" eventType="touchUpInside" id="Qhy-Nd-M8a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="2XL-4Q-8N5" firstAttribute="bottom" secondItem="gV5-qm-aw4" secondAttribute="bottom" constant="20" id="CRw-50-ftc"/>
                             <constraint firstItem="l1w-BW-bLR" firstAttribute="top" secondItem="d9B-pP-8Tj" secondAttribute="bottom" constant="10" id="RVT-M3-iZ3"/>
                             <constraint firstItem="f8H-ux-DVD" firstAttribute="top" secondItem="nC8-b2-q4r" secondAttribute="top" constant="15" id="TnJ-70-rz4"/>
                             <constraint firstItem="l1w-BW-bLR" firstAttribute="leading" secondItem="nC8-b2-q4r" secondAttribute="leading" constant="15" id="Y61-uU-OyF"/>
@@ -1291,6 +1294,7 @@ It is important to ensure you look after your nails properly and practise good f
                             <constraint firstAttribute="bottom" secondItem="l1w-BW-bLR" secondAttribute="bottom" constant="10" id="h2E-Km-sRd"/>
                             <constraint firstAttribute="trailing" secondItem="f8H-ux-DVD" secondAttribute="trailing" constant="15" id="jZo-do-RtA"/>
                             <constraint firstAttribute="trailing" secondItem="d9B-pP-8Tj" secondAttribute="trailing" constant="15" id="sIO-JI-Uqv"/>
+                            <constraint firstItem="2XL-4Q-8N5" firstAttribute="trailing" secondItem="gV5-qm-aw4" secondAttribute="trailing" constant="20" id="tgl-8U-eT4"/>
                             <constraint firstItem="d9B-pP-8Tj" firstAttribute="leading" secondItem="nC8-b2-q4r" secondAttribute="leading" constant="15" id="w78-S0-hNm"/>
                             <constraint firstItem="f8H-ux-DVD" firstAttribute="leading" secondItem="nC8-b2-q4r" secondAttribute="leading" constant="15" id="zyq-Fb-hMX"/>
                         </constraints>
@@ -1299,6 +1303,7 @@ It is important to ensure you look after your nails properly and practise good f
                     <connections>
                         <outlet property="circleView" destination="T6B-7o-L85" id="hR7-b2-IQT"/>
                         <outlet property="circleViewHeight" destination="jqN-zm-oz9" id="gSI-w9-M8a"/>
+                        <outlet property="circleViewLabel" destination="Zyu-zK-LNR" id="fc8-Hj-Dc8"/>
                         <outlet property="circleViewWidth" destination="ei8-CO-EZI" id="Wg3-Uc-svk"/>
                         <outlet property="trackerCollectionView" destination="d9B-pP-8Tj" id="eTg-r4-rvR"/>
                     </connections>

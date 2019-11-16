@@ -11,9 +11,9 @@ import RealmSwift
 
 class TrackerVC: UIViewController {
 
+    // MARK: - Properties
     var multiplier: Int = 1
     var parentViewWidth: CGFloat?
-    var dummyData = ["YES", "NO","YES", "NO","YES", "NO", "YES"]
     lazy var realm: Realm = { return try! Realm() }()
     var defaultTrackerData = [Compliance]()
     var sortedDefaultArray = [Compliance]()
@@ -22,17 +22,18 @@ class TrackerVC: UIViewController {
     let toDate = Date()
     let dateFormatter = DateFormatter()
     var daysTreated: Int = 0
-//    {
-//        willSet(myNewValue){
-//            resizeCircleView(by: myNewValue)
-//        }
-//    }
+    var lowestUntakenPrimaryKey: Int?
 
+    // MARK: - IB Outlets
     @IBOutlet weak var circleView: UIView!
     @IBOutlet weak var circleViewWidth: NSLayoutConstraint!
     @IBOutlet weak var circleViewHeight: NSLayoutConstraint!
     @IBOutlet weak var trackerCollectionView: UICollectionView!
-
+    @IBOutlet weak var circleViewLabel: UILabel!
+    @IBAction func viewMoreButton(_ sender: UIButton) {
+    }
+    
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerCollectionViewCells()
@@ -40,19 +41,23 @@ class TrackerVC: UIViewController {
         setupCircleView()
         trackerCollectionView.delegate = self
         trackerCollectionView.dataSource = self
+        lowestUntakenPrimaryKey = incrementID()
         initializeTrackerData()
+        updateCircleViewLabel()
+        //print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         resizeCircleView(by: daysTreated)
     }
 
-    func registerCollectionViewCells(){
+    // MARK: - Register Collection View Cell Xib
+    func registerCollectionViewCells() {
         let trackerViewCell = UINib(nibName: "TrackerViewCell", bundle: nil)
         self.trackerCollectionView.register(trackerViewCell, forCellWithReuseIdentifier: "trackerCell")
     }
 
-    func setParentViewWidthProperty(){
+    func setParentViewWidthProperty() {
         parentViewWidth = self.view.frame.size.width
     }
 
@@ -92,41 +97,57 @@ class TrackerVC: UIViewController {
     }
 
     func initializeTrackerData() {
+
         createDefaultTrackerData()
 
         guard let fromDate = Calendar.current.date(byAdding: .day, value: -7, to: toDate) else { return }
-        retrieveTrackerData(from: fromDate, to: toDate)
+
         dateFormatter.dateFormat = "EEEE"
         retrieveTrackerData(from: fromDate, to: toDate)
-
         createMergedTrackerData()
     }
 
-    func createDefaultTrackerData(){
+    func createDefaultTrackerData() {
 
         for i in 0..<7 {
             let defaultEntry = Compliance()
             let dateToAdd = Calendar.current.date(byAdding: .day, value: -i, to: Date())!
-            defaultEntry.id = i
+            defaultEntry.id = lowestUntakenPrimaryKey!
             defaultEntry.dateTaken = dateToAdd
             defaultEntry.takenMedication = false
             defaultTrackerData.append(defaultEntry)
+            lowestUntakenPrimaryKey! += 1
         }
         sortedDefaultArray = defaultTrackerData.sorted(by: {$0.dateTaken! > $1.dateTaken!})
-        //print(sortedDefaultArray.description)
+        //print(sortedDefaultArray)
     }
+    
 
-    func retrieveTrackerData(from fromDate: Date, to toDate: Date){
+    func retrieveTrackerData(from fromDate: Date, to toDate: Date) {
+
         trackerData = realm.objects(Compliance.self).filter("dateTaken BETWEEN %@", [fromDate, toDate]).sorted(byKeyPath: "dateTaken", ascending: false)
-        //print(trackerData?.description)
+        //print(trackerData!)
+        //print(trackerData?.count)
     }
 
     func createMergedTrackerData() {
-        for i in 0..<trackerData!.count {
-            let diffInDays = Calendar.current.dateComponents([.day], from: trackerData![i].dateTaken!, to: Date()).day
-            sortedDefaultArray[diffInDays!] = trackerData![i]
-        }
 
+        for i in 0..<trackerData!.count {
+//            let diffInDays = Calendar.current.dateComponents([.day], from: trackerData![i].dateTaken!, to: Date()).day
+//            sortedDefaultArray[diffInDays!] = trackerData![i]
+            //print(diffInDays!)
+
+            let xxx = removeTimeStamp(fromDate: trackerData![i].dateTaken!)
+            let yyy = removeTimeStamp(fromDate: Date())
+            let diffInDays = Calendar.current.dateComponents([.day], from: xxx, to: yyy).day
+
+            if diffInDays! <= 6 {
+                sortedDefaultArray[diffInDays!] = trackerData![i]
+            }
+//            print(diffInDays!)
+
+        }
+        //print(sortedDefaultArray)
         finalTrackerData = sortedDefaultArray.sorted(by: {$0.dateTaken! < $1.dateTaken!})
 
         for i in finalTrackerData {
@@ -145,11 +166,11 @@ class TrackerVC: UIViewController {
                 print("Error saving context \(error)")
             }
         }
-        //print(finalArray.description)
+        //print(finalTrackerData.description)
         countDaysTreated()
     }
 
-    func countDaysTreated(){
+    func countDaysTreated() {
         var count = 0
 
         for i in 0..<trackerData!.count {
@@ -160,12 +181,28 @@ class TrackerVC: UIViewController {
         daysTreated = count
     }
 
+    func incrementID() -> Int {
+        //print((realm.objects(Compliance.self).max(ofProperty: "id") as Int? ?? 0) + 1)
+        return (realm.objects(Compliance.self).max(ofProperty: "id") as Int? ?? 0) + 1
+    }
+
+    public func removeTimeStamp(fromDate: Date) -> Date {
+        guard let date = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: fromDate)) else {
+            fatalError("Failed to strip time from Date object")
+        }
+        return date
+    }
+
+    func updateCircleViewLabel() {
+        circleViewLabel.text = "\(daysTreated) treatments completed!"
+    }
+
 }
 
 extension TrackerVC: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dummyData.count
+        return finalTrackerData.count
     }
 
 }
@@ -175,7 +212,7 @@ extension TrackerVC: UICollectionViewDelegateFlowLayout {
     // - TODO: Correctly space collection view cells
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let numberOfCells = dummyData.count
+        let numberOfCells = finalTrackerData.count
         return CGSize(width: trackerCollectionView.bounds.size.width/CGFloat(numberOfCells+2), height: CGFloat(50))
     }
 
@@ -185,8 +222,6 @@ extension TrackerVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "trackerCell", for: indexPath) as! TrackerViewCell
-
-        cell.trackerLabel.text = dummyData[indexPath.row]
 
         if finalTrackerData[indexPath.row].takenMedication == true {
             cell.trackerButton.isSelected = true
@@ -205,7 +240,7 @@ extension TrackerVC: UICollectionViewDelegate {
         return cell
     }
 
-    @IBAction func treatmentButtonTapped(sender : UIButton){
+    @IBAction func treatmentButtonTapped(sender : UIButton) {
         sender.isSelected = !sender.isSelected
 
         let complianceEntry = Compliance()
@@ -229,9 +264,8 @@ extension TrackerVC: UICollectionViewDelegate {
 
         countDaysTreated()
         resizeCircleView(by: daysTreated)
+        updateCircleViewLabel()
         trackerCollectionView.reloadData()
     }
 
 }
-
-
