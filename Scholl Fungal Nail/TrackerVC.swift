@@ -22,16 +22,16 @@ class TrackerVC: UIViewController {
     let toDate = Date()
     let dateFormatter = DateFormatter()
     var daysTreated: Int = 0
+//    {
+//        willSet(myNewValue){
+//            resizeCircleView(by: myNewValue)
+//        }
+//    }
 
     @IBOutlet weak var circleView: UIView!
     @IBOutlet weak var circleViewWidth: NSLayoutConstraint!
     @IBOutlet weak var circleViewHeight: NSLayoutConstraint!
     @IBOutlet weak var trackerCollectionView: UICollectionView!
-    
-    //    @IBAction func animateButton(_ sender: UIButton) {
-    //        multiplier += 1
-    //        resizeCircleView(by: multiplier)
-    //    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,6 @@ class TrackerVC: UIViewController {
         setupCircleView()
         trackerCollectionView.delegate = self
         trackerCollectionView.dataSource = self
-
         initializeTrackerData()
     }
 
@@ -69,10 +68,10 @@ class TrackerVC: UIViewController {
         circleView.translatesAutoresizingMaskIntoConstraints = false
     }
 
-    func resizeCircleView(by multipler: Int) {
+    func resizeCircleView(by multiplier: Int) {
 
-        circleViewWidth.constant = (parentViewWidth!/7) * CGFloat(multipler * 2)
-        circleViewHeight.constant = (parentViewWidth!/7) * CGFloat(multipler * 2)
+        circleViewWidth.constant = (parentViewWidth!/7) * CGFloat(multiplier * 2)
+        circleViewHeight.constant = (parentViewWidth!/7) * CGFloat(multiplier * 2)
 
         UIView.animate(withDuration: 1.0,
                        delay: 0,
@@ -87,9 +86,9 @@ class TrackerVC: UIViewController {
         animation.duration = 1.0
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
         animation.fromValue = circleView.layer.cornerRadius
-        animation.toValue = ((parentViewWidth!/7)*CGFloat(multipler))
+        animation.toValue = ((parentViewWidth!/7)*CGFloat(multiplier))
         circleView.layer.add(animation, forKey: nil)
-        circleView.layer.cornerRadius = ((parentViewWidth!/7)*CGFloat(multipler))
+        circleView.layer.cornerRadius = ((parentViewWidth!/7)*CGFloat(multiplier))
     }
 
     func initializeTrackerData() {
@@ -129,6 +128,23 @@ class TrackerVC: UIViewController {
         }
 
         finalTrackerData = sortedDefaultArray.sorted(by: {$0.dateTaken! < $1.dateTaken!})
+
+        for i in finalTrackerData {
+            let complianceEntry = Compliance()
+
+            complianceEntry.id = i.id
+            complianceEntry.dateTaken = i.dateTaken
+            complianceEntry.takenMedication = i.takenMedication
+
+            do {
+                try self.realm.write {
+                    self.realm.add(complianceEntry, update: .all)
+                    trackerCollectionView.reloadData()
+                }
+            } catch {
+                print("Error saving context \(error)")
+            }
+        }
         //print(finalArray.description)
         countDaysTreated()
     }
@@ -136,8 +152,8 @@ class TrackerVC: UIViewController {
     func countDaysTreated(){
         var count = 0
 
-        for i in 0..<finalTrackerData.count {
-            if finalTrackerData[i].takenMedication == true {
+        for i in 0..<trackerData!.count {
+            if trackerData![i].takenMedication == true {
                 count += 1
             }
         }
@@ -172,47 +188,50 @@ extension TrackerVC: UICollectionViewDelegate {
 
         cell.trackerLabel.text = dummyData[indexPath.row]
 
-                if finalTrackerData[indexPath.row].takenMedication == true {
-                    cell.trackerButton.isSelected = true
-                    cell.trackerButton.tintColor = UIColor.systemGreen
-                } else {
-                    cell.trackerButton.isSelected = false
-                    cell.trackerButton.tintColor = UIColor.gray
-                }
+        if finalTrackerData[indexPath.row].takenMedication == true {
+            cell.trackerButton.isSelected = true
+            cell.trackerButton.tintColor = UIColor.systemGreen
+        } else {
+            cell.trackerButton.isSelected = false
+            cell.trackerButton.tintColor = UIColor.gray
+        }
 
-                let longDate = dateFormatter.string(from: finalTrackerData[indexPath.row].dateTaken!)
-                let shortDate = String(longDate.prefix(3))
-                cell.trackerLabel.text = shortDate
-                cell.trackerButton.tag = indexPath.row
-        //        cell.treatmentTrackerButton.addTarget(self, action: #selector(treatmentButtonTapped), for: UIControl.Event.touchUpInside)
+        let longDate = dateFormatter.string(from: finalTrackerData[indexPath.row].dateTaken!)
+        let shortDate = String(longDate.prefix(3))
+        cell.trackerLabel.text = shortDate
+        cell.trackerButton.tag = indexPath.row
+        cell.trackerButton.addTarget(self, action: #selector(treatmentButtonTapped), for: UIControl.Event.touchUpInside)
 
         return cell
     }
+
+    @IBAction func treatmentButtonTapped(sender : UIButton){
+        sender.isSelected = !sender.isSelected
+
+        let complianceEntry = Compliance()
+
+        let primaryKey = finalTrackerData[sender.tag].id
+        let dateToEdit = finalTrackerData[sender.tag].dateTaken
+        let currentTakenMedicationState = finalTrackerData[sender.tag].takenMedication
+        let newTakenMedicationState = !currentTakenMedicationState
+
+        complianceEntry.id = primaryKey
+        complianceEntry.dateTaken = dateToEdit
+        complianceEntry.takenMedication = newTakenMedicationState
+
+        do {
+            try self.realm.write {
+                self.realm.add(complianceEntry, update: .all)
+            }
+        } catch {
+            print("Error saving context \(error)")
+        }
+
+        countDaysTreated()
+        resizeCircleView(by: daysTreated)
+        trackerCollectionView.reloadData()
+    }
+
 }
 
-//        @IBAction func treatmentButtonTapped(sender : UIButton){
-//            sender.isSelected = !sender.isSelected
-//
-//            let complianceEntry = Compliance()
-//
-//            let primaryKey = treatmentTrackerArray![sender.tag].id
-//            let dateToEdit = treatmentTrackerArray![sender.tag].dateTaken
-//            let currentTakenMedicationState = treatmentTrackerArray![sender.tag].takenMedication
-//            let newTakenMedicationState = !currentTakenMedicationState
-//
-//            complianceEntry.id = primaryKey
-//            complianceEntry.dateTaken = dateToEdit
-//            complianceEntry.takenMedication = newTakenMedicationState
-//
-//            do {
-//                try self.realm.write {
-//                    self.realm.add(complianceEntry, update: .all)
-//                    //updateDatabaseArray()
-//                    treatmentTrackerCollectionView.reloadData()
-//                }
-//            } catch {
-//                print("Error saving context \(error)")
-//            }
-//        }
-//
-//}
+
