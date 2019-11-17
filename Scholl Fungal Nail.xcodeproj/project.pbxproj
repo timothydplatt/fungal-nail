@@ -14,6 +14,7 @@
 		AA4CE74D237C122E004296BE /* 1798-check-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = AA4CE74C237C122E004296BE /* 1798-check-animation.json */; };
 		AA4CE74F237C31C1004296BE /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4CE74E237C31C1004296BE /* TestVC.swift */; };
 		AA5332A72371F47700D5A9D1 /* ChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5332A62371F47700D5A9D1 /* ChildVC.swift */; };
+		AA5A001C23816EE600AAD00B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5A001B23816EE600AAD00B /* HomeVC.swift */; };
 		AA6AC4AF23742436003E7C71 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AC4AE23742436003E7C71 /* LocationTableViewCell.swift */; };
 		AA76E5502369D23D004322EE /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76E54F2369D23D004322EE /* ThirdViewController.swift */; };
 		AA76E5522369D24D004322EE /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76E5512369D24D004322EE /* FourthViewController.swift */; };
@@ -24,7 +25,7 @@
 		AA7CB2D22369C659000CC249 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA7CB2D02369C659000CC249 /* Main.storyboard */; };
 		AA7CB2D42369C65B000CC249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA7CB2D32369C65B000CC249 /* Assets.xcassets */; };
 		AA7CB2D72369C65B000CC249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA7CB2D52369C65B000CC249 /* LaunchScreen.storyboard */; };
-		AA8A863223701A8900F992E4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7CB2CC2369C659000CC249 /* HomeVC.swift */; };
+		AA8A863223701A8900F992E4 /* OldHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7CB2CC2369C659000CC249 /* OldHomeVC.swift */; };
 		AA8A8634237041CC00F992E4 /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8633237041CC00F992E4 /* ResultsVC.swift */; };
 		AA8A8636237063EA00F992E4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8635237063EA00F992E4 /* Result.swift */; };
 		AA9DB1B6237EF7E4009A8785 /* TrackerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9DB1B5237EF7E4009A8785 /* TrackerVC.swift */; };
@@ -49,6 +50,7 @@
 		AA4CE74C237C122E004296BE /* 1798-check-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "1798-check-animation.json"; sourceTree = "<group>"; };
 		AA4CE74E237C31C1004296BE /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestVC.swift; path = "Scholl Fungal Nail/TestVC.swift"; sourceTree = SOURCE_ROOT; };
 		AA5332A62371F47700D5A9D1 /* ChildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildVC.swift; sourceTree = SOURCE_ROOT; };
+		AA5A001B23816EE600AAD00B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = "Scholl Fungal Nail/HomeVC.swift"; sourceTree = SOURCE_ROOT; };
 		AA6AC4AE23742436003E7C71 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		AA76E54F2369D23D004322EE /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		AA76E5512369D24D004322EE /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +58,7 @@
 		AA7CB2C52369C659000CC249 /* Scholl Fungal Nail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scholl Fungal Nail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA7CB2C82369C659000CC249 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA7CB2CA2369C659000CC249 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AA7CB2CC2369C659000CC249 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		AA7CB2CC2369C659000CC249 /* OldHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldHomeVC.swift; sourceTree = "<group>"; };
 		AA7CB2CE2369C659000CC249 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		AA7CB2D12369C659000CC249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA7CB2D32369C65B000CC249 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,11 +149,12 @@
 		AAEE62C9236C5FCA00203FA5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AA5A001B23816EE600AAD00B /* HomeVC.swift */,
 				AA9DB1B5237EF7E4009A8785 /* TrackerVC.swift */,
 				AA4CE74E237C31C1004296BE /* TestVC.swift */,
 				AA4CE74A237C104B004296BE /* LottieVC.swift */,
 				AADD48BE237AE460008E4491 /* QuizVC.swift */,
-				AA7CB2CC2369C659000CC249 /* HomeVC.swift */,
+				AA7CB2CC2369C659000CC249 /* OldHomeVC.swift */,
 				AA5332A62371F47700D5A9D1 /* ChildVC.swift */,
 				AAF4E9152371C9E5006CEB55 /* CompareVC.swift */,
 				AA8A8633237041CC00F992E4 /* ResultsVC.swift */,
@@ -314,7 +317,7 @@
 				AAF4E9162371C9E5006CEB55 /* CompareVC.swift in Sources */,
 				AA6AC4AF23742436003E7C71 /* LocationTableViewCell.swift in Sources */,
 				AA8A8636237063EA00F992E4 /* Result.swift in Sources */,
-				AA8A863223701A8900F992E4 /* HomeVC.swift in Sources */,
+				AA8A863223701A8900F992E4 /* OldHomeVC.swift in Sources */,
 				AA76E5522369D24D004322EE /* FourthViewController.swift in Sources */,
 				AA9DB1BB237F27AC009A8785 /* TrackerViewCell.swift in Sources */,
 				AA7CB2CF2369C659000CC249 /* SecondViewController.swift in Sources */,
@@ -330,6 +333,7 @@
 				AADD48BF237AE460008E4491 /* QuizVC.swift in Sources */,
 				AA7CB2C92369C659000CC249 /* AppDelegate.swift in Sources */,
 				AA7CB2CB2369C659000CC249 /* SceneDelegate.swift in Sources */,
+				AA5A001C23816EE600AAD00B /* HomeVC.swift in Sources */,
 				AAF4E910237168A1006CEB55 /* CustomCollectionViewCell.swift in Sources */,
 				AA4CE74F237C31C1004296BE /* TestVC.swift in Sources */,
 				AA0843352374D8F2002772AD /* TreatmentTrackerCollectionViewCell.swift in Sources */,

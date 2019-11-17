@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeVC: UIViewController, UINavigationControllerDelegate {
+class OldHomeVC: UIViewController, UINavigationControllerDelegate {
 
     //MARK: - Properties
     let imagePicker = UIImagePickerController()
@@ -76,7 +76,7 @@ class HomeVC: UIViewController, UINavigationControllerDelegate {
 
 }
 
-extension HomeVC: UIImagePickerControllerDelegate {
+extension OldHomeVC: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 
         guard let pickedImage = info[.originalImage] as? UIImage else {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pBN-tn-1pe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -11,13 +11,13 @@
         <!--Home-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="HomeVC" customModule="Scholl_Fungal_Nail" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="OldHomeVC" customModule="Scholl_Fungal_Nail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zbo-Ii-Ftq">
-                                <rect key="frame" x="0.0" y="88" width="414" height="695"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="788"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7b-Ez-4U1">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="775"/>
@@ -26,10 +26,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTZ-Ri-50S">
-                                        <rect key="frame" x="10" y="201.5" width="394" height="181"/>
+                                        <rect key="frame" x="10" y="224.5" width="394" height="204.5"/>
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLO-RQ-I3h">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="181"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="204.5"/>
                                                 <connections>
                                                     <segue destination="AN6-J6-LQe" kind="embed" identifier="embedChildSegue" id="THM-Cr-aQ5"/>
                                                 </connections>
@@ -44,7 +44,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zja-AF-FfG">
-                                        <rect key="frame" x="10" y="10" width="394" height="181.5"/>
+                                        <rect key="frame" x="10" y="10" width="394" height="204.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SA8-U1-y4P">
                                                 <rect key="frame" x="15" y="15" width="364" height="33"/>
@@ -67,17 +67,17 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="139" translatesAutoresizingMaskIntoConstraints="NO" id="kio-CE-Jfc">
-                                                <rect key="frame" x="-15" y="136.5" width="394" height="35"/>
+                                                <rect key="frame" x="-15" y="136.5" width="394" height="58"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3e-5Y-ES5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="35"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="58"/>
                                                         <state key="normal" title="Not Now"/>
                                                         <connections>
                                                             <action selector="c1NotNotButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="SIl-VA-cdv"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKg-Zb-PD9">
-                                                        <rect key="frame" x="266.5" y="0.0" width="127.5" height="35"/>
+                                                        <rect key="frame" x="266.5" y="0.0" width="127.5" height="58"/>
                                                         <state key="normal" title="Take Tour"/>
                                                         <connections>
                                                             <action selector="c1TakeToutButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="o7P-KG-ieI"/>
@@ -104,7 +104,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koA-Gq-wHo">
-                                        <rect key="frame" x="10" y="392.5" width="394" height="181.5"/>
+                                        <rect key="frame" x="10" y="439" width="394" height="204.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are things improving?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxN-Es-8Hi">
                                                 <rect key="frame" x="15" y="15" width="364" height="33"/>
@@ -113,7 +113,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIL-pF-sJd">
-                                                <rect key="frame" x="275.5" y="141.5" width="73" height="30"/>
+                                                <rect key="frame" x="275.5" y="164.5" width="73" height="30"/>
                                                 <state key="normal" title="View More"/>
                                                 <connections>
                                                     <action selector="c3ViewMoreButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="qPN-jQ-GSH"/>
@@ -131,7 +131,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZmB-YT-J3A">
-                                        <rect key="frame" x="10" y="584" width="394" height="181"/>
+                                        <rect key="frame" x="10" y="653.5" width="394" height="204.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fungal nail quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAQ-y2-V6e">
                                                 <rect key="frame" x="15" y="15" width="364" height="33"/>
@@ -140,11 +140,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdc-oX-coB">
-                                                <rect key="frame" x="275.5" y="141" width="73" height="30"/>
+                                                <rect key="frame" x="275.5" y="164.5" width="73" height="30"/>
                                                 <state key="normal" title="View More"/>
                                                 <connections>
                                                     <action selector="c4ViewMoreButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ASz-Zl-T9M"/>
-                                                    <segue destination="w7i-hY-oGz" kind="show" identifier="showQuiz" id="3Lh-WN-qef"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -203,14 +202,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="taA-bP-Sbh" kind="show" identifier="test" id="7UP-qc-BxD"/>
-                        <segue destination="cd8-NQ-PvG" kind="show" identifier="comparison" id="hBf-ei-wWE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2750.7246376811595" y="-715.17857142857144"/>
+            <point key="canvasLocation" x="5739" y="51"/>
         </scene>
         <!--ResultsVC-->
         <scene sceneID="80m-Wf-2yt">
@@ -224,9 +219,9 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GnW-cZ-F0q" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1566.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mxy-ym-brm">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mxy-ym-brm">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="362.5"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Bm4-M6-WDW">
@@ -380,12 +375,13 @@ It is important to ensure you look after your nails properly and practise good f
                                             <constraint firstItem="LeF-62-KQ7" firstAttribute="leading" secondItem="GnW-cZ-F0q" secondAttribute="leading" constant="15" id="lJr-YQ-0K0"/>
                                             <constraint firstAttribute="trailing" secondItem="LeF-62-KQ7" secondAttribute="trailing" constant="15" id="onc-12-iZ1"/>
                                             <constraint firstAttribute="trailing" secondItem="Mxy-ym-brm" secondAttribute="trailing" id="tO1-J1-EOe"/>
-                                            <constraint firstItem="Mxy-ym-brm" firstAttribute="height" secondItem="GnW-cZ-F0q" secondAttribute="height" multiplier="0.5" id="vW3-8O-xvX"/>
+                                            <constraint firstAttribute="bottom" secondItem="Jgk-IX-xm4" secondAttribute="bottom" constant="4" id="y22-in-exA"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="GnW-cZ-F0q" secondAttribute="trailing" id="CsE-pF-SvX"/>
+                                    <constraint firstItem="Mxy-ym-brm" firstAttribute="height" secondItem="3UO-VY-1m2" secondAttribute="height" multiplier="0.5" id="Iqr-zL-VNi"/>
                                     <constraint firstItem="GnW-cZ-F0q" firstAttribute="height" secondItem="FAs-Jw-WUu" secondAttribute="height" priority="250" id="KAD-Rc-mcU"/>
                                     <constraint firstItem="GnW-cZ-F0q" firstAttribute="leading" secondItem="FAs-Jw-WUu" secondAttribute="leading" id="X3t-t4-Sie"/>
                                     <constraint firstItem="GnW-cZ-F0q" firstAttribute="top" secondItem="FAs-Jw-WUu" secondAttribute="top" id="Ycc-7m-ZF0"/>
@@ -421,7 +417,7 @@ It is important to ensure you look after your nails properly and practise good f
                     <viewLayoutGuide key="safeArea" id="dPg-px-tYV"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="3773.913043478261" y="-715.17857142857144"/>
+            <point key="canvasLocation" x="3320" y="-715"/>
         </scene>
         <!--CompareVC-->
         <scene sceneID="a6f-i2-yXe">
@@ -481,7 +477,7 @@ It is important to ensure you look after your nails properly and practise good f
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eiy-5p-djn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4530.434782608696" y="-714.50892857142856"/>
+            <point key="canvasLocation" x="3320" y="12"/>
         </scene>
         <!--QuizVC-->
         <scene sceneID="Htj-Ae-P91">
@@ -619,7 +615,7 @@ It is important to ensure you look after your nails properly and practise good f
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3bV-vZ-fZj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5276.811594202899" y="-715.17857142857144"/>
+            <point key="canvasLocation" x="3319" y="733"/>
         </scene>
         <!--History-->
         <scene sceneID="wg7-f3-ORb">
@@ -649,7 +645,7 @@ It is important to ensure you look after your nails properly and practise good f
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.54117647058823526" green="0.87058823529411766" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jaK-JG-0fM" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="4KU-gz-FIv"/>
                             <constraint firstItem="jaK-JG-0fM" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="DFH-lE-8IR"/>
@@ -665,7 +661,7 @@ It is important to ensure you look after your nails properly and practise good f
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2751" y="0.0"/>
+            <point key="canvasLocation" x="2512" y="0.0"/>
         </scene>
         <!--Circle Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -883,7 +879,7 @@ It is important to ensure you look after your nails properly and practise good f
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="hC9-Jj-uha"/>
+                        <segue destination="pBN-tn-1pe" kind="relationship" relationship="rootViewController" id="kP7-mr-5Vf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dV4-d3-Cge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -914,7 +910,7 @@ It is important to ensure you look after your nails properly and practise good f
             <objects>
                 <viewController id="AN6-J6-LQe" customClass="ChildVC" customModule="Scholl_Fungal_Nail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sxz-j1-nGu">
-                        <rect key="frame" x="0.0" y="0.0" width="394" height="181"/>
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="204.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2k-A2-PzY">
@@ -1037,119 +1033,128 @@ It is important to ensure you look after your nails properly and practise good f
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPd-xf-Ffu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3757.971014492754" y="-228.01339285714283"/>
+            <point key="canvasLocation" x="5852" y="534"/>
         </scene>
-        <!--TestVC-->
-        <scene sceneID="dXK-7P-zdN">
-            <objects>
-                <viewController id="flg-z2-iJQ" customClass="TestVC" customModule="Scholl_Fungal_Nail" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3NX-c7-WaZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqL-pH-0pF">
-                                <rect key="frame" x="184" y="114" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="button:" destination="flg-z2-iJQ" eventType="touchUpInside" id="ErQ-bF-aWw"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODa-60-dnZ">
-                                <rect key="frame" x="50" y="762" width="50" height="50"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXa-0a-zci">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="262-bM-aaz">
-                                                <rect key="frame" x="4" y="14.5" width="42" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="4Y1-yG-SLV"/>
-                                            <constraint firstItem="262-bM-aaz" firstAttribute="centerX" secondItem="qXa-0a-zci" secondAttribute="centerX" id="fyb-Wh-xIN"/>
-                                            <constraint firstAttribute="height" constant="50" id="mW4-Z2-2uA"/>
-                                            <constraint firstItem="262-bM-aaz" firstAttribute="centerY" secondItem="qXa-0a-zci" secondAttribute="centerY" id="qWw-DE-VIY"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="qXa-0a-zci" firstAttribute="centerX" secondItem="ODa-60-dnZ" secondAttribute="centerX" id="27H-Bp-mbZ"/>
-                                    <constraint firstAttribute="height" constant="50" id="MbQ-Zq-Nvt"/>
-                                    <constraint firstItem="qXa-0a-zci" firstAttribute="centerY" secondItem="ODa-60-dnZ" secondAttribute="centerY" id="WJU-Jr-Jdn"/>
-                                    <constraint firstAttribute="width" constant="50" id="t8O-En-KRV"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="Beg-ml-Kyo" firstAttribute="bottom" secondItem="ODa-60-dnZ" secondAttribute="bottom" constant="50" id="wZJ-J1-Zam"/>
-                            <constraint firstItem="ODa-60-dnZ" firstAttribute="leading" secondItem="Beg-ml-Kyo" secondAttribute="leading" constant="50" id="xYh-fc-8Xb"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Beg-ml-Kyo"/>
-                    </view>
-                    <connections>
-                        <outlet property="circleHeight" destination="mW4-Z2-2uA" id="SbW-WU-qT1"/>
-                        <outlet property="circleView" destination="qXa-0a-zci" id="Fvf-SW-gAQ"/>
-                        <outlet property="circleWidth" destination="4Y1-yG-SLV" id="ie9-z0-AYF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Do5-Sq-517" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4376.811594202899" y="663.61607142857144"/>
-        </scene>
-        <!--View Controller-->
+        <!--HomeVC-->
         <scene sceneID="PW8-7U-bA2">
             <objects>
-                <viewController id="pBN-tn-1pe" sceneMemberID="viewController">
+                <viewController id="pBN-tn-1pe" customClass="HomeVC" customModule="Scholl_Fungal_Nail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tu4-m0-ySD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sb-Wt-mU8">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="705"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPk-Uu-IiH" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="868"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="775"/>
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSs-rH-Mde" userLabel="Tracker View Container">
-                                                <rect key="frame" x="10" y="224.5" width="394" height="204.5"/>
+                                                <rect key="frame" x="10" y="201.5" width="394" height="181"/>
                                                 <connections>
                                                     <segue destination="QyY-9e-Tjc" kind="embed" id="cgW-ll-s3q"/>
                                                 </connections>
                                             </containerView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNk-oP-pNj" userLabel="TopMask">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="224.5"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="201.5"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D92-pr-hkU" userLabel="BottomMask">
-                                                <rect key="frame" x="0.0" y="429" width="414" height="389"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <rect key="frame" x="0.0" y="382.5" width="414" height="342.5"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UgO-Kw-VwS" userLabel="LeadingMask">
-                                                <rect key="frame" x="0.0" y="0.0" width="10" height="868"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="10" height="775"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lM8-XB-wj4" userLabel="TrailingMask">
-                                                <rect key="frame" x="404" y="0.0" width="10" height="868"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <rect key="frame" x="404" y="0.0" width="10" height="775"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Opu-4v-sVo" userLabel="Introduction View">
-                                                <rect key="frame" x="10" y="10" width="394" height="204.5"/>
-                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="10" y="10" width="394" height="181.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvf-9s-Y0N">
+                                                        <rect key="frame" x="15" y="15" width="97" height="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1k-gB-njf">
+                                                        <rect key="frame" x="20" y="131.5" width="67" height="30"/>
+                                                        <state key="normal" title="Take Tour"/>
+                                                        <connections>
+                                                            <action selector="takeTourButton:" destination="pBN-tn-1pe" eventType="touchUpInside" id="xwC-lH-1nD"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwa-XJ-MUN">
+                                                        <rect key="frame" x="300" y="131.5" width="74" height="30"/>
+                                                        <state key="normal" title="No Thanks"/>
+                                                        <connections>
+                                                            <action selector="noThanksButton:" destination="pBN-tn-1pe" eventType="touchUpInside" id="adP-OE-JOE"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="g1k-gB-njf" secondAttribute="bottom" constant="20" id="BGC-8N-sQx"/>
+                                                    <constraint firstAttribute="trailing" secondItem="iwa-XJ-MUN" secondAttribute="trailing" constant="20" id="Hkp-Hj-UVO"/>
+                                                    <constraint firstItem="Tvf-9s-Y0N" firstAttribute="top" secondItem="Opu-4v-sVo" secondAttribute="top" constant="15" id="ZjB-6w-Acw"/>
+                                                    <constraint firstAttribute="bottom" secondItem="iwa-XJ-MUN" secondAttribute="bottom" constant="20" id="bpf-NQ-vbH"/>
+                                                    <constraint firstItem="g1k-gB-njf" firstAttribute="leading" secondItem="Opu-4v-sVo" secondAttribute="leading" constant="20" id="epA-SQ-ZnW"/>
+                                                    <constraint firstItem="Tvf-9s-Y0N" firstAttribute="leading" secondItem="Opu-4v-sVo" secondAttribute="leading" constant="15" id="nvW-OK-A0e"/>
+                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcg-Cf-gh0" userLabel="Compare View">
-                                                <rect key="frame" x="10" y="439" width="394" height="204.5"/>
-                                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="10" y="392.5" width="394" height="181.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comparison Tool" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rn8-6O-cmy">
+                                                        <rect key="frame" x="15" y="15" width="364" height="27"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgl-rv-5dT">
+                                                        <rect key="frame" x="311" y="131.5" width="63" height="30"/>
+                                                        <state key="normal" title="Compare"/>
+                                                        <connections>
+                                                            <action selector="compareButton:" destination="pBN-tn-1pe" eventType="touchUpInside" id="pZm-ol-ghQ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Tgl-rv-5dT" secondAttribute="trailing" constant="20" id="1VM-1z-diB"/>
+                                                    <constraint firstItem="rn8-6O-cmy" firstAttribute="top" secondItem="gcg-Cf-gh0" secondAttribute="top" constant="15" id="EBt-eZ-HwK"/>
+                                                    <constraint firstItem="rn8-6O-cmy" firstAttribute="leading" secondItem="gcg-Cf-gh0" secondAttribute="leading" constant="15" id="nB5-ir-dCz"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Tgl-rv-5dT" secondAttribute="bottom" constant="20" id="ty8-lp-QSJ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rn8-6O-cmy" secondAttribute="trailing" constant="15" id="vqr-T6-fEJ"/>
+                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kWM-Kt-bKn" userLabel="Quiz View">
-                                                <rect key="frame" x="10" y="653.5" width="394" height="204.5"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="10" y="584" width="394" height="181"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fungal Nail Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjv-4B-BNc">
+                                                        <rect key="frame" x="15" y="15" width="161" height="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xg2-LI-AmU">
+                                                        <rect key="frame" x="307" y="131" width="67" height="30"/>
+                                                        <state key="normal" title="Take Quiz"/>
+                                                        <connections>
+                                                            <action selector="takeQuizButton:" destination="pBN-tn-1pe" eventType="touchUpInside" id="A7U-H7-Id9"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="xg2-LI-AmU" secondAttribute="bottom" constant="20" id="KM7-3l-nEu"/>
+                                                    <constraint firstItem="mjv-4B-BNc" firstAttribute="leading" secondItem="kWM-Kt-bKn" secondAttribute="leading" constant="15" id="Llj-Gx-Lpf"/>
+                                                    <constraint firstItem="mjv-4B-BNc" firstAttribute="top" secondItem="kWM-Kt-bKn" secondAttribute="top" constant="15" id="lRs-T3-zig"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xg2-LI-AmU" secondAttribute="trailing" constant="20" id="zxK-Rm-T1t"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1195,35 +1200,59 @@ It is important to ensure you look after your nails properly and practise good f
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="WSs-rH-Mde" firstAttribute="height" secondItem="ESb-qf-kMH" secondAttribute="height" multiplier="0.25" id="5K6-xX-h1r"/>
                             <constraint firstItem="8sb-Wt-mU8" firstAttribute="top" secondItem="ESb-qf-kMH" secondAttribute="top" id="6Pp-0L-JdP"/>
                             <constraint firstItem="Opu-4v-sVo" firstAttribute="height" secondItem="ESb-qf-kMH" secondAttribute="height" multiplier="0.25" id="SPy-Jd-9Bt"/>
                             <constraint firstItem="kWM-Kt-bKn" firstAttribute="height" secondItem="ESb-qf-kMH" secondAttribute="height" multiplier="0.25" id="SVK-Kw-JQM"/>
                             <constraint firstItem="ESb-qf-kMH" firstAttribute="trailing" secondItem="8sb-Wt-mU8" secondAttribute="trailing" id="VBc-eM-duj"/>
-                            <constraint firstItem="ESb-qf-kMH" firstAttribute="bottom" secondItem="8sb-Wt-mU8" secondAttribute="bottom" id="Xmu-U9-FML"/>
+                            <constraint firstItem="ESb-qf-kMH" firstAttribute="bottom" secondItem="8sb-Wt-mU8" secondAttribute="bottom" constant="20" id="Xmu-U9-FML"/>
                             <constraint firstItem="gcg-Cf-gh0" firstAttribute="height" secondItem="ESb-qf-kMH" secondAttribute="height" multiplier="0.25" id="jyS-zV-cBj"/>
                             <constraint firstItem="D92-pr-hkU" firstAttribute="bottom" secondItem="ESb-qf-kMH" secondAttribute="bottom" id="mNb-AS-qJn"/>
                             <constraint firstItem="8sb-Wt-mU8" firstAttribute="leading" secondItem="ESb-qf-kMH" secondAttribute="leading" id="xRc-S6-O4j"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ESb-qf-kMH"/>
                     </view>
+                    <navigationItem key="navigationItem" id="S4X-If-JsH">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="camera" catalog="system" id="kvg-59-cgI">
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="camera" catalog="system" id="zRA-Kf-hY0">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cameraTapped:" destination="pBN-tn-1pe" id="H5P-aV-cV1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bottomMask" destination="D92-pr-hkU" id="tDO-Xl-F8R"/>
+                        <outlet property="compareCard" destination="gcg-Cf-gh0" id="eo6-Q2-J89"/>
+                        <outlet property="introductionCard" destination="Opu-4v-sVo" id="5sP-48-4Dz"/>
+                        <outlet property="leadingMask" destination="UgO-Kw-VwS" id="9Lb-91-N6b"/>
+                        <outlet property="quizCard" destination="kWM-Kt-bKn" id="eBX-Dm-6jL"/>
+                        <outlet property="topMask" destination="cNk-oP-pNj" id="oAA-qZ-26v"/>
+                        <outlet property="trackerCard" destination="WSs-rH-Mde" id="Bea-Gr-eEW"/>
+                        <outlet property="trailingMask" destination="lM8-XB-wj4" id="wu6-as-3sx"/>
+                        <segue destination="taA-bP-Sbh" kind="show" identifier="diagnosis" id="Kn4-lp-9Sr"/>
+                        <segue destination="cd8-NQ-PvG" kind="show" identifier="comparison" id="0uV-9s-tx4"/>
+                        <segue destination="w7i-hY-oGz" kind="show" identifier="takeQuiz" id="0tT-NP-ipo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6z-IN-dzW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5111.594202898551" y="663.61607142857144"/>
+            <point key="canvasLocation" x="2511.594202898551" y="-715.17857142857144"/>
         </scene>
         <!--TrackerVC-->
         <scene sceneID="QNW-7a-Z1M">
             <objects>
                 <viewController id="QyY-9e-Tjc" customClass="TrackerVC" customModule="Scholl_Fungal_Nail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nC8-b2-q4r">
-                        <rect key="frame" x="0.0" y="0.0" width="394" height="204.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="181"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1w-BW-bLR">
-                                <rect key="frame" x="15" y="144.5" width="50" height="50"/>
+                                <rect key="frame" x="15" y="121" width="50" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6B-7o-L85" userLabel="CircleView">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -1257,7 +1286,7 @@ It is important to ensure you look after your nails properly and practise good f
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d9B-pP-8Tj">
-                                <rect key="frame" x="15" y="51" width="364" height="83.5"/>
+                                <rect key="frame" x="15" y="51" width="364" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XXr-tC-SOg">
                                     <size key="itemSize" width="50" height="50"/>
@@ -1267,7 +1296,7 @@ It is important to ensure you look after your nails properly and practise good f
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="trackerCell" id="nFv-ww-ngX" customClass="TrackerViewCell" customModule="Scholl_Fungal_Nail" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="17" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="5" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gam-db-3dV">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -1277,14 +1306,13 @@ It is important to ensure you look after your nails properly and practise good f
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gV5-qm-aw4">
-                                <rect key="frame" x="301" y="154.5" width="73" height="30"/>
+                                <rect key="frame" x="301" y="131" width="73" height="30"/>
                                 <state key="normal" title="View More"/>
                                 <connections>
                                     <action selector="viewMoreButton:" destination="QyY-9e-Tjc" eventType="touchUpInside" id="Qhy-Nd-M8a"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2XL-4Q-8N5" firstAttribute="bottom" secondItem="gV5-qm-aw4" secondAttribute="bottom" constant="20" id="CRw-50-ftc"/>
                             <constraint firstItem="l1w-BW-bLR" firstAttribute="top" secondItem="d9B-pP-8Tj" secondAttribute="bottom" constant="10" id="RVT-M3-iZ3"/>
@@ -1310,7 +1338,7 @@ It is important to ensure you look after your nails properly and practise good f
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJO-AT-ns7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5862.3188405797109" y="430.91517857142856"/>
+            <point key="canvasLocation" x="3303" y="-1141"/>
         </scene>
     </scenes>
     <resources>

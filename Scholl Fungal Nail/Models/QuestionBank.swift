@@ -14,7 +14,7 @@ class QuestionBank {
 
     init() {
         // Creating a quiz item and appending it to the list
-        let item = Question(text: "Valentine\'s day is banned in Saudi Arabia.", correctAnswer: true)
+        let item = Question(text: "Toenail fungus is harmless.", correctAnswer: false)
 
         // Add the Question to the list of questions
         list.append(item)
@@ -24,7 +24,7 @@ class QuestionBank {
 
         list.append(Question(text: "Over-the-counter products alone will cure it.", correctAnswer: false))
 
-        list.append(Question(text: "You can catch if from other people.", correctAnswer: true))
+        list.append(Question(text: "You can catch it from other people.", correctAnswer: true))
 
         list.append(Question(text: "Shower shoes are the only weapon against toenail fungus.", correctAnswer: false))
 
@@ -36,6 +36,7 @@ class QuestionBank {
 
         list.append(Question(text: "Fingernail fungus is just as common.", correctAnswer: false))
 
+        //TODO: - Update below questions
         list.append(Question(text: "Buzz Aldrin\'s mother\'s maiden name was \"Moon\".", correctAnswer: true))
 
         list.append(Question(text: "The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.", correctAnswer: false))
