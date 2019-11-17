@@ -27,6 +27,11 @@ class ResultsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //TODO: - Move to UIDelegate
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        resultTitle.textColor = UIColor(red: 91/255, green: 143/255, blue: 147/255, alpha: 1)
+        resultAccuracy.textColor = UIColor(red: 91/255, green: 143/255, blue: 147/255, alpha: 1)
+
         //print(Realm.Configuration.defaultConfiguration.fileURL!)
         imageResult.image = resultImage
 
@@ -54,7 +59,7 @@ class ResultsVC: UIViewController {
             }
 
             self.resultTitle.text = results.first?.identifier
-            self.resultAccuracy.text = String(accuracy * 100)
+            self.resultAccuracy.text = String(format: "%.2f", accuracy * 100) + "%"
 
             let x = self.realm.objects(Result.self).sorted(byKeyPath: "id", ascending: false)[0]
             let highest = x.id

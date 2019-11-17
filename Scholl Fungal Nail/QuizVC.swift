@@ -26,6 +26,7 @@ class QuizVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         updateUI()
     }
     
@@ -99,6 +100,7 @@ class QuizVC: UIViewController {
         else {
             
             SVProgressHUD.showError(withStatus: "Wrong!")
+            SVProgressHUD.dismiss(withDelay: 1.0)
         }
     }
     

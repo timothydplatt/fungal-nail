@@ -27,7 +27,7 @@ class CompareVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryArray = realm.objects(Result.self)
-
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         var bottomImage = UIImage(data: categoryArray?.last?.image as! Data)
         var topImage = UIImage(data: categoryArray?.first?.image as! Data)
 

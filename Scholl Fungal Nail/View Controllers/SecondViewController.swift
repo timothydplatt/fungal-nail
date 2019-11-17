@@ -15,13 +15,41 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     let realm = try! Realm()
     var categoryArray: Results<Result>?
+    //TODO: - Make an enumeration
+    var sort: String = "oldest"
+
+    @IBAction func historySortButton(_ sender: UIButton) {
+        if sort == "newest" {
+            categoryArray = categoryArray?.sorted(byKeyPath: "dateAdded", ascending: false)
+            sort = "oldest"
+            resultsHistory.reloadData()
+            sender.setTitle("Newest", for: .normal)
+        } else if sort == "oldest" {
+            categoryArray = categoryArray?.sorted(byKeyPath: "dateAdded", ascending: true)
+            sort = "newest"
+            resultsHistory.reloadData()
+            sender.setTitle("Oldest", for: .normal)
+        }
+
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        categoryArray = realm.objects(Result.self)
+        categoryArray = realm.objects(Result.self).sorted(byKeyPath: "dateAdded", ascending: false)
         self.registerTableViewCells()
         resultsHistory.reloadData()
         resultsHistory.rowHeight = 90
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+
+        if #available(iOS 13.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithOpaqueBackground()
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+            navBarAppearance.backgroundColor = UIColor(red: 138/255, green: 222/255, blue: 204/255, alpha: 1)
+            self.navigationController?.navigationBar.standardAppearance = navBarAppearance
+            self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -44,9 +72,9 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         if let category = categoryArray?[indexPath.row] {
             cell?.cellTitle.text = category.resultClassification
-            cell?.cellSubTitle.text = String(category.resultAccuracy)
+            cell?.cellSubTitle.text = String(format: "%.2f", category.resultAccuracy * 100) + "%"
             cell?.cellImage.image = UIImage(data: category.image as! Data)
-            cell?.cellImage.makeRounded()
+            //cell?.cellImage.makeRounded()
 
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MMM dd, yyyy"

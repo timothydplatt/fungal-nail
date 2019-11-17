@@ -92,6 +92,13 @@ class HomeVC: UIViewController {
         quizCard.layer.shadowRadius = 0.0
         quizCard.layer.masksToBounds = false
         quizCard.layer.cornerRadius = 4.0
+
+//        trackerCard.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+//        trackerCard.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+//        trackerCard.layer.shadowOpacity = 1.0
+//        trackerCard.layer.shadowRadius = 0.0
+//        trackerCard.layer.masksToBounds = false
+//        trackerCard.layer.cornerRadius = 4.0
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
