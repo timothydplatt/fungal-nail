@@ -467,6 +467,10 @@ It is important to ensure you look after your nails properly and practise good f
                                     <constraint firstAttribute="height" constant="60" id="d6h-fi-5ax"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="totofoot2" translatesAutoresizingMaskIntoConstraints="NO" id="3wL-g8-snc">
+                                <rect key="frame" x="334" y="176" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.61568627450980395" green="0.86274509803921573" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -490,12 +494,13 @@ It is important to ensure you look after your nails properly and practise good f
                         <outlet property="bottomColourAverage" destination="Sie-Y7-62y" id="Vou-NH-6go"/>
                         <outlet property="bottomImageView" destination="k5H-RM-gaT" id="UqU-t0-fNV"/>
                         <outlet property="topColourAverage" destination="4RB-mo-e70" id="7gA-UP-P9W"/>
+                        <outlet property="topFootImage" destination="3wL-g8-snc" id="Xys-XM-Zgd"/>
                         <outlet property="topImageView" destination="WBR-tB-ft9" id="aI5-Hb-igs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eiy-5p-djn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3320" y="12"/>
+            <point key="canvasLocation" x="3318.840579710145" y="11.383928571428571"/>
         </scene>
         <!--Quiz-->
         <scene sceneID="Htj-Ae-P91">
@@ -824,7 +829,7 @@ It is important to ensure you look after your nails properly and practise good f
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7XB-yN-u72">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.86274509799999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="10" id="Y9y-Fe-5Iw">
                                     <size key="itemSize" width="349" height="250"/>
                                     <size key="estimatedItemSize" width="370" height="250"/>
@@ -1393,6 +1398,7 @@ It is important to ensure you look after your nails properly and practise good f
         <image name="homeFilled" width="25" height="25"/>
         <image name="listFilled" width="25" height="25"/>
         <image name="pinFilled" width="25" height="25"/>
+        <image name="totofoot2" width="945" height="945"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

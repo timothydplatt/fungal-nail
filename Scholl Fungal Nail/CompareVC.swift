@@ -22,7 +22,8 @@ class CompareVC: UIViewController {
     @IBOutlet weak var bottomImageView: UIImageView!
     @IBOutlet weak var topColourAverage: UIView!
     @IBOutlet weak var bottomColourAverage: UIView!
-    
+    @IBOutlet weak var topFootImage: UIImageView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +35,9 @@ class CompareVC: UIViewController {
         bottomImageView.image = bottomImage
         topImageView.image = topImage
 
-        topColourAverage.backgroundColor = bottomImage?.averageColor
-        bottomColourAverage.backgroundColor = topImage?.averageColor
+        topColourAverage.backgroundColor = topImage?.averageColor
+        bottomColourAverage.backgroundColor = bottomImage?.averageColor
+        topFootImage.setImageColor(color: (topImage?.averageColor)!)
 //        print(bottomImage?.averageColor)
 //        print(topImage?.averageColor)
     }
@@ -56,4 +58,12 @@ extension UIImage {
 
         return UIColor(red: CGFloat(bitmap[0]) / 255, green: CGFloat(bitmap[1]) / 255, blue: CGFloat(bitmap[2]) / 255, alpha: CGFloat(bitmap[3]) / 255)
     }
+}
+
+extension UIImageView {
+  func setImageColor(color: UIColor) {
+    let templateImage = self.image?.withRenderingMode(.alwaysTemplate)
+    self.image = templateImage
+    self.tintColor = color
+  }
 }
