@@ -31,6 +31,7 @@
 		AA9DB1B6237EF7E4009A8785 /* TrackerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9DB1B5237EF7E4009A8785 /* TrackerVC.swift */; };
 		AA9DB1BB237F27AC009A8785 /* TrackerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9DB1B9237F27AC009A8785 /* TrackerViewCell.swift */; };
 		AA9DB1BC237F27AC009A8785 /* TrackerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9DB1BA237F27AC009A8785 /* TrackerViewCell.xib */; };
+		AAB5F8642382FAE600D3196E /* MapDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB5F8632382FAE600D3196E /* MapDetailVC.swift */; };
 		AADD48BF237AE460008E4491 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD48BE237AE460008E4491 /* QuizVC.swift */; };
 		AADD48C1237AEA34008E4491 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD48C0237AEA34008E4491 /* Question.swift */; };
 		AADD48C3237AEA54008E4491 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD48C2237AEA54008E4491 /* QuestionBank.swift */; };
@@ -69,6 +70,7 @@
 		AA9DB1B5237EF7E4009A8785 /* TrackerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackerVC.swift; path = "Scholl Fungal Nail/TrackerVC.swift"; sourceTree = SOURCE_ROOT; };
 		AA9DB1B9237F27AC009A8785 /* TrackerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewCell.swift; sourceTree = SOURCE_ROOT; };
 		AA9DB1BA237F27AC009A8785 /* TrackerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackerViewCell.xib; sourceTree = SOURCE_ROOT; };
+		AAB5F8632382FAE600D3196E /* MapDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapDetailVC.swift; path = "Scholl Fungal Nail/MapDetailVC.swift"; sourceTree = SOURCE_ROOT; };
 		AADD48BE237AE460008E4491 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuizVC.swift; path = "Scholl Fungal Nail/QuizVC.swift"; sourceTree = SOURCE_ROOT; };
 		AADD48C0237AEA34008E4491 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Question.swift; path = "Scholl Fungal Nail/View Controllers/Question.swift"; sourceTree = SOURCE_ROOT; };
 		AADD48C2237AEA54008E4491 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		AAEE62C9236C5FCA00203FA5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AAB5F8632382FAE600D3196E /* MapDetailVC.swift */,
 				AA5A001B23816EE600AAD00B /* HomeVC.swift */,
 				AA9DB1B5237EF7E4009A8785 /* TrackerVC.swift */,
 				AA4CE74E237C31C1004296BE /* TestVC.swift */,
@@ -320,6 +323,7 @@
 				AA8A863223701A8900F992E4 /* OldHomeVC.swift in Sources */,
 				AA76E5522369D24D004322EE /* FourthViewController.swift in Sources */,
 				AA9DB1BB237F27AC009A8785 /* TrackerViewCell.swift in Sources */,
+				AAB5F8642382FAE600D3196E /* MapDetailVC.swift in Sources */,
 				AA7CB2CF2369C659000CC249 /* SecondViewController.swift in Sources */,
 				AA76E5502369D23D004322EE /* ThirdViewController.swift in Sources */,
 				AA7C81E0236C873C004684C2 /* MyImageClassifier2 1.mlmodel in Sources */,
@@ -484,6 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8VCL93DYP;
 				INFOPLIST_FILE = "Scholl Fungal Nail/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -503,6 +508,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8VCL93DYP;
 				INFOPLIST_FILE = "Scholl Fungal Nail/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

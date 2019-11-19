@@ -20,26 +20,22 @@ class CompareVC: UIViewController {
 
     @IBOutlet weak var topImageView: UIImageView!
     @IBOutlet weak var bottomImageView: UIImageView!
-    @IBOutlet weak var topColourAverage: UIView!
-    @IBOutlet weak var bottomColourAverage: UIView!
     @IBOutlet weak var topFootImage: UIImageView!
-
+    @IBOutlet weak var bottomFootImage: UIImageView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryArray = realm.objects(Result.self)
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        var bottomImage = UIImage(data: categoryArray?.last?.image as! Data)
-        var topImage = UIImage(data: categoryArray?.first?.image as! Data)
+        let bottomImage = UIImage(data: categoryArray?.last?.image as! Data)
+        let topImage = UIImage(data: categoryArray?.first?.image as! Data)
 
         bottomImageView.image = bottomImage
         topImageView.image = topImage
 
-        topColourAverage.backgroundColor = topImage?.averageColor
-        bottomColourAverage.backgroundColor = bottomImage?.averageColor
         topFootImage.setImageColor(color: (topImage?.averageColor)!)
-//        print(bottomImage?.averageColor)
-//        print(topImage?.averageColor)
+        bottomFootImage.setImageColor(color: (bottomImage?.averageColor)!)
     }
     
 }

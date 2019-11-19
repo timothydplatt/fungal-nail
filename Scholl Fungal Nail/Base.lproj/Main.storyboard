@@ -322,10 +322,10 @@ You will not usually feel any pain at first, but the nail can look ugly and, wit
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="JTH-Lr-Jpf"/>
                                                 </constraints>
-                                                <mutableString key="text">Several types of fungus cause nail infections. For example, athlete's foot is a fungal skin infection of the toes that easily spreads to the toenails, and candida is a yeast that can cause an infection of the skin around the nails (usually the fingernails).
+                                                <string key="text">Several types of fungus cause nail infections. For example, athlete's foot is a fungal skin infection of the toes that easily spreads to the toenails, and candida is a yeast that can cause an infection of the skin around the nails (usually the fingernails).
 
 There are several factors that increase the risk of a fungal nail infection, such as wearing shoes that cause hot sweaty feet, or being in a humid environment regular damage to the nail or skin
-having poor health, or certain health conditions such as diabetes or psoriasis.</mutableString>
+having poor health, or certain health conditions such as diabetes or psoriasis.</string>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -446,54 +446,47 @@ It is important to ensure you look after your nails properly and practise good f
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WBR-tB-ft9">
-                                <rect key="frame" x="0.0" y="88" width="414" height="362.5"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="347.5"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k5H-RM-gaT">
-                                <rect key="frame" x="0.0" y="450.5" width="414" height="362.5"/>
+                                <rect key="frame" x="0.0" y="435.5" width="414" height="347.5"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4RB-mo-e70">
-                                <rect key="frame" x="334" y="108" width="60" height="60"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="totofoot2" translatesAutoresizingMaskIntoConstraints="NO" id="3wL-g8-snc">
+                                <rect key="frame" x="314" y="108" width="80" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="8bp-hy-aLI"/>
-                                    <constraint firstAttribute="height" constant="60" id="WNo-lM-M6y"/>
+                                    <constraint firstAttribute="height" constant="80" id="Q18-WB-Jh6"/>
+                                    <constraint firstAttribute="width" constant="80" id="hHC-w3-2vW"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sie-Y7-62y">
-                                <rect key="frame" x="334" y="470.5" width="60" height="60"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="totofoot2" translatesAutoresizingMaskIntoConstraints="NO" id="X2d-ku-vvF" userLabel="Bottom Foot Image">
+                                <rect key="frame" x="314" y="455.5" width="80" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="9qr-Ei-9ab"/>
-                                    <constraint firstAttribute="height" constant="60" id="d6h-fi-5ax"/>
+                                    <constraint firstAttribute="height" constant="80" id="CSi-r4-60a"/>
+                                    <constraint firstAttribute="width" constant="80" id="mTr-fr-z2M"/>
                                 </constraints>
-                            </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="totofoot2" translatesAutoresizingMaskIntoConstraints="NO" id="3wL-g8-snc">
-                                <rect key="frame" x="334" y="176" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.61568627450980395" green="0.86274509803921573" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="WBR-tB-ft9" firstAttribute="top" secondItem="r9d-gn-jOV" secondAttribute="top" id="6BQ-wP-OwP"/>
-                            <constraint firstItem="4RB-mo-e70" firstAttribute="top" secondItem="r9d-gn-jOV" secondAttribute="top" constant="20" id="AcH-ef-5id"/>
+                            <constraint firstItem="r9d-gn-jOV" firstAttribute="trailing" secondItem="X2d-ku-vvF" secondAttribute="trailing" constant="20" id="7Co-qL-Fia"/>
                             <constraint firstItem="WBR-tB-ft9" firstAttribute="leading" secondItem="r9d-gn-jOV" secondAttribute="leading" id="Ak7-kF-QGN"/>
-                            <constraint firstItem="WBR-tB-ft9" firstAttribute="height" secondItem="r9d-gn-jOV" secondAttribute="height" multiplier="0.5" id="Hzk-oN-fAd"/>
+                            <constraint firstItem="WBR-tB-ft9" firstAttribute="height" secondItem="r9d-gn-jOV" secondAttribute="height" multiplier="0.5" constant="-15" id="Hzk-oN-fAd"/>
                             <constraint firstItem="k5H-RM-gaT" firstAttribute="trailing" secondItem="r9d-gn-jOV" secondAttribute="trailing" id="IkY-eD-Rph"/>
-                            <constraint firstItem="k5H-RM-gaT" firstAttribute="height" secondItem="r9d-gn-jOV" secondAttribute="height" multiplier="0.5" id="Iw6-5W-uhP"/>
-                            <constraint firstItem="k5H-RM-gaT" firstAttribute="bottom" secondItem="r9d-gn-jOV" secondAttribute="bottom" id="NQQ-o7-R9W"/>
-                            <constraint firstItem="r9d-gn-jOV" firstAttribute="trailing" secondItem="Sie-Y7-62y" secondAttribute="trailing" constant="20" id="SrF-Nf-UHa"/>
-                            <constraint firstItem="r9d-gn-jOV" firstAttribute="trailing" secondItem="4RB-mo-e70" secondAttribute="trailing" constant="20" id="Zk9-cV-PTE"/>
+                            <constraint firstItem="k5H-RM-gaT" firstAttribute="height" secondItem="r9d-gn-jOV" secondAttribute="height" multiplier="0.5" constant="-15" id="Iw6-5W-uhP"/>
+                            <constraint firstItem="3wL-g8-snc" firstAttribute="top" secondItem="r9d-gn-jOV" secondAttribute="top" constant="20" id="W2Y-7N-c0W"/>
+                            <constraint firstItem="r9d-gn-jOV" firstAttribute="trailing" secondItem="3wL-g8-snc" secondAttribute="trailing" constant="20" id="Zji-nM-a6m"/>
                             <constraint firstItem="k5H-RM-gaT" firstAttribute="leading" secondItem="r9d-gn-jOV" secondAttribute="leading" id="aki-Vj-a60"/>
                             <constraint firstItem="WBR-tB-ft9" firstAttribute="trailing" secondItem="r9d-gn-jOV" secondAttribute="trailing" id="fdV-hQ-TEQ"/>
-                            <constraint firstItem="Sie-Y7-62y" firstAttribute="top" secondItem="WBR-tB-ft9" secondAttribute="bottom" constant="20" id="sGh-Cc-TxB"/>
+                            <constraint firstItem="X2d-ku-vvF" firstAttribute="top" secondItem="WBR-tB-ft9" secondAttribute="bottom" constant="20" id="n1D-ZA-8n2"/>
+                            <constraint firstItem="k5H-RM-gaT" firstAttribute="top" secondItem="WBR-tB-ft9" secondAttribute="bottom" id="vi2-sP-gdo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r9d-gn-jOV"/>
                     </view>
                     <navigationItem key="navigationItem" title="Compare" id="aBQ-9s-5YJ"/>
                     <connections>
-                        <outlet property="bottomColourAverage" destination="Sie-Y7-62y" id="Vou-NH-6go"/>
+                        <outlet property="bottomFootImage" destination="X2d-ku-vvF" id="iMc-yd-lHQ"/>
                         <outlet property="bottomImageView" destination="k5H-RM-gaT" id="UqU-t0-fNV"/>
-                        <outlet property="topColourAverage" destination="4RB-mo-e70" id="7gA-UP-P9W"/>
                         <outlet property="topFootImage" destination="3wL-g8-snc" id="Xys-XM-Zgd"/>
                         <outlet property="topImageView" destination="WBR-tB-ft9" id="aI5-Hb-igs"/>
                     </connections>
@@ -501,6 +494,105 @@ It is important to ensure you look after your nails properly and practise good f
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eiy-5p-djn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3318.840579710145" y="11.383928571428571"/>
+        </scene>
+        <!--Map DetailVC-->
+        <scene sceneID="cqf-or-C9c">
+            <objects>
+                <viewController id="4H5-Dx-Oad" customClass="MapDetailVC" customModule="Scholl_Fungal_Nail" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SX7-oZ-gj1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hp-SK-JYO">
+                                <rect key="frame" x="20" y="40" width="374" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.35686274509999999" green="0.56078431370000004" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31M-2d-CeV">
+                                <rect key="frame" x="20" y="141" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMZ-If-7gc">
+                                <rect key="frame" x="20" y="170" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Naq-2t-Piw">
+                                <rect key="frame" x="20" y="199" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02g-Hb-a5t">
+                                <rect key="frame" x="20" y="228" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soL-ML-dzq">
+                                <rect key="frame" x="20" y="257" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIe-fP-5rc">
+                                <rect key="frame" x="20" y="286" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngc-mt-SuU">
+                                <rect key="frame" x="20" y="315" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W35-n6-nHP">
+                                <rect key="frame" x="17" y="344" width="77" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Directions">
+                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="directionsButton:" destination="4H5-Dx-Oad" eventType="touchUpInside" id="Veh-6x-dr1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kF0-zf-8zJ" firstAttribute="trailing" secondItem="4Hp-SK-JYO" secondAttribute="trailing" constant="20" id="DBy-yD-quL"/>
+                            <constraint firstItem="4Hp-SK-JYO" firstAttribute="top" secondItem="kF0-zf-8zJ" secondAttribute="top" constant="40" id="Uh3-zZ-y6H"/>
+                            <constraint firstItem="4Hp-SK-JYO" firstAttribute="leading" secondItem="kF0-zf-8zJ" secondAttribute="leading" constant="20" id="exM-a8-hYd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kF0-zf-8zJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="URm-Uc-LJV"/>
+                    <connections>
+                        <outlet property="label1" destination="31M-2d-CeV" id="jS1-jb-vnX"/>
+                        <outlet property="label2" destination="GMZ-If-7gc" id="GNY-pk-HkE"/>
+                        <outlet property="label3" destination="Naq-2t-Piw" id="Ukt-NP-hXn"/>
+                        <outlet property="label4" destination="02g-Hb-a5t" id="QKo-HQ-QK5"/>
+                        <outlet property="label5" destination="soL-ML-dzq" id="g2K-9q-epp"/>
+                        <outlet property="label6" destination="PIe-fP-5rc" id="lfK-Hw-eSI"/>
+                        <outlet property="label7" destination="Ngc-mt-SuU" id="ABc-LB-dg4"/>
+                        <outlet property="titleLabel" destination="4Hp-SK-JYO" id="59K-Av-jRR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="boJ-Xl-vKL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2511.594202898551" y="732.58928571428567"/>
         </scene>
         <!--Quiz-->
         <scene sceneID="Htj-Ae-P91">
@@ -713,7 +805,7 @@ It is important to ensure you look after your nails properly and practise good f
                         <segue destination="bOU-sR-HD5" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="Vhl-PM-bme" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="QFO-tZ-mvX" kind="relationship" relationship="viewControllers" id="WJy-uu-jr0"/>
-                        <segue destination="Mkq-Ne-eQO" kind="relationship" relationship="viewControllers" id="N01-xx-6EA"/>
+                        <segue destination="3sz-yp-aPN" kind="relationship" relationship="viewControllers" id="N01-xx-6EA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -735,38 +827,35 @@ It is important to ensure you look after your nails properly and practise good f
                                 <rect key="frame" x="0.0" y="428.5" width="414" height="354.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="locationCell" id="kqQ-BW-r7A" customClass="LocationTableViewCell" customModule="Scholl_Fungal_Nail" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="locationCell" rowHeight="80" id="kqQ-BW-r7A" customClass="LocationTableViewCell" customModule="Scholl_Fungal_Nail" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kqQ-BW-r7A" id="eI4-C9-sHb" customClass="LocationTableViewCell" customModule="Scholl_Fungal_Nail" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtR-0A-V7C">
-                                                    <rect key="frame" x="186" y="11.5" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="364" translatesAutoresizingMaskIntoConstraints="NO" id="KtR-0A-V7C">
+                                                    <rect key="frame" x="30" y="11" width="286" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqa-Fw-42A">
-                                                    <rect key="frame" x="41" y="11" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="zqa-Fw-42A">
+                                                    <rect key="frame" x="324" y="30" width="60" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" red="0.35686274509999999" green="0.56078431370000004" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISk-k1-Q8B">
-                                                    <rect key="frame" x="303" y="11" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="ISk-k1-Q8B">
+                                                    <rect key="frame" x="30" y="45" width="286" height="19"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="KtR-0A-V7C" firstAttribute="centerY" secondItem="eI4-C9-sHb" secondAttribute="centerY" id="Gug-pL-rZX"/>
-                                                <constraint firstItem="KtR-0A-V7C" firstAttribute="centerX" secondItem="eI4-C9-sHb" secondAttribute="centerX" id="mWb-sc-CXn"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="locationLabel" destination="KtR-0A-V7C" id="7G1-r8-np8"/>
@@ -812,6 +901,7 @@ It is important to ensure you look after your nails properly and practise good f
                         <outlet property="mapView" destination="AhF-2T-auo" id="vVP-dz-fYL"/>
                         <outlet property="segmentedControl" destination="WC8-Im-XnT" id="U3L-QH-SKs"/>
                         <outlet property="tableView" destination="VkC-7L-b1A" id="Gc9-fO-c05"/>
+                        <segue destination="4H5-Dx-Oad" kind="show" identifier="mapDetail" id="Q2D-fK-tQY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZq-ok-tWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -826,68 +916,106 @@ It is important to ensure you look after your nails properly and practise good f
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7XB-yN-u72">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.61568627450000002" green="0.86274509799999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="10" id="Y9y-Fe-5Iw">
-                                    <size key="itemSize" width="349" height="250"/>
-                                    <size key="estimatedItemSize" width="370" height="250"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="t3Q-yL-hVv" customClass="CustomCollectionViewCell" customModule="Scholl_Fungal_Nail" customModuleProvider="target">
-                                        <rect key="frame" x="22" y="10" width="370" height="250"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gl6-rN-ArY">
-                                            <rect key="frame" x="0.0" y="0.0" width="370" height="250"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sdw-ym-0AY">
-                                                    <rect key="frame" x="0.0" y="0.0" width="370" height="133"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z81-Jb-74L">
-                                                    <rect key="frame" x="8" y="141" width="354" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A beautiful beach resort off the cost of Hawaii" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfQ-Po-XBO">
-                                                    <rect key="frame" x="8" y="170" width="354" height="72"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </collectionViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="customSize" width="370" height="250"/>
-                                        <connections>
-                                            <outlet property="productDescription" destination="yfQ-Po-XBO" id="G3r-dP-IjZ"/>
-                                            <outlet property="productImage" destination="sdw-ym-0AY" id="xqi-N4-1bG"/>
-                                            <outlet property="productTitle" destination="z81-Jb-74L" id="45v-ks-af1"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="Mkq-Ne-eQO" id="AKi-iG-5oJ"/>
-                                    <outlet property="delegate" destination="Mkq-Ne-eQO" id="gf7-ur-el1"/>
-                                </connections>
-                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHW-ka-oRg">
+                                <rect key="frame" x="10" y="98" width="394" height="217.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scholl Fungal Nail Treatment" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zln-9F-9yv">
+                                        <rect key="frame" x="138" y="20" width="246" height="52.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scholl_product_1" translatesAutoresizingMaskIntoConstraints="NO" id="hhb-gh-Mcz">
+                                        <rect key="frame" x="10" y="10" width="118" height="197.5"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hhb-gh-Mcz" secondAttribute="bottom" constant="10" id="0vg-Zs-af5"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zln-9F-9yv" secondAttribute="trailing" constant="10" id="3iP-0c-bU7"/>
+                                    <constraint firstItem="Zln-9F-9yv" firstAttribute="leading" secondItem="hhb-gh-Mcz" secondAttribute="trailing" constant="10" id="5Jf-j2-ylH"/>
+                                    <constraint firstItem="hhb-gh-Mcz" firstAttribute="top" secondItem="SHW-ka-oRg" secondAttribute="top" constant="10" id="Gx2-UM-8ci"/>
+                                    <constraint firstItem="Zln-9F-9yv" firstAttribute="top" secondItem="SHW-ka-oRg" secondAttribute="top" constant="20" id="wMg-b5-HTo"/>
+                                    <constraint firstItem="hhb-gh-Mcz" firstAttribute="leading" secondItem="SHW-ka-oRg" secondAttribute="leading" constant="10" id="xUU-vv-bxt"/>
+                                    <constraint firstItem="hhb-gh-Mcz" firstAttribute="width" secondItem="SHW-ka-oRg" secondAttribute="width" multiplier="0.3" id="yr7-Xq-qJO"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jmw-9d-lkd">
+                                <rect key="frame" x="10" y="325.5" width="394" height="217.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scholl_product_2" translatesAutoresizingMaskIntoConstraints="NO" id="QR8-bU-YR6">
+                                        <rect key="frame" x="10" y="10" width="118" height="197.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2-Pack Fungal Nail Treatment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twf-qI-zI3">
+                                        <rect key="frame" x="138" y="20" width="246" height="52.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="QR8-bU-YR6" firstAttribute="top" secondItem="Jmw-9d-lkd" secondAttribute="top" constant="10" id="1HS-Xc-Jam"/>
+                                    <constraint firstAttribute="bottom" secondItem="QR8-bU-YR6" secondAttribute="bottom" constant="10" id="FgR-yc-ajC"/>
+                                    <constraint firstItem="QR8-bU-YR6" firstAttribute="leading" secondItem="Jmw-9d-lkd" secondAttribute="leading" constant="10" id="IX2-xZ-QhI"/>
+                                    <constraint firstItem="QR8-bU-YR6" firstAttribute="width" secondItem="Jmw-9d-lkd" secondAttribute="width" multiplier="0.3" id="Jm7-GW-xxh"/>
+                                    <constraint firstItem="Twf-qI-zI3" firstAttribute="leading" secondItem="QR8-bU-YR6" secondAttribute="trailing" constant="10" id="JmI-C1-Fxh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Twf-qI-zI3" secondAttribute="trailing" constant="10" id="KxN-l0-Sd6"/>
+                                    <constraint firstItem="Twf-qI-zI3" firstAttribute="top" secondItem="Jmw-9d-lkd" secondAttribute="top" constant="20" id="f0q-1K-Deb"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sMN-Ys-Uvx">
+                                <rect key="frame" x="10" y="553" width="394" height="217.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="canespro" translatesAutoresizingMaskIntoConstraints="NO" id="eYa-tO-m7b">
+                                        <rect key="frame" x="10" y="10" width="118" height="197.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Canespro Fungal Nail Treatment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFK-R5-zgW">
+                                        <rect key="frame" x="138" y="20" width="246" height="52.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="nFK-R5-zgW" firstAttribute="top" secondItem="sMN-Ys-Uvx" secondAttribute="top" constant="20" id="BWV-7x-jgY"/>
+                                    <constraint firstItem="eYa-tO-m7b" firstAttribute="width" secondItem="sMN-Ys-Uvx" secondAttribute="width" multiplier="0.3" id="BXE-ZO-eJR"/>
+                                    <constraint firstAttribute="bottom" secondItem="eYa-tO-m7b" secondAttribute="bottom" constant="10" id="OOZ-6n-K1t"/>
+                                    <constraint firstAttribute="trailing" secondItem="nFK-R5-zgW" secondAttribute="trailing" constant="10" id="bJp-ym-Jan"/>
+                                    <constraint firstItem="nFK-R5-zgW" firstAttribute="leading" secondItem="eYa-tO-m7b" secondAttribute="trailing" constant="10" id="esn-Rm-zDX"/>
+                                    <constraint firstItem="eYa-tO-m7b" firstAttribute="leading" secondItem="sMN-Ys-Uvx" secondAttribute="leading" constant="10" id="rK1-Zi-GEa"/>
+                                    <constraint firstItem="eYa-tO-m7b" firstAttribute="top" secondItem="sMN-Ys-Uvx" secondAttribute="top" constant="10" id="sQf-h5-JG6"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.61568627450000002" green="0.86274509799999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jmw-9d-lkd" firstAttribute="leading" secondItem="KxE-RD-SRg" secondAttribute="leading" constant="10" id="7Xx-Kt-xv7"/>
+                            <constraint firstItem="SHW-ka-oRg" firstAttribute="height" secondItem="KxE-RD-SRg" secondAttribute="height" multiplier="0.3" id="EsX-wa-C1L"/>
+                            <constraint firstItem="KxE-RD-SRg" firstAttribute="trailing" secondItem="sMN-Ys-Uvx" secondAttribute="trailing" constant="10" id="ISl-VN-eAN"/>
+                            <constraint firstItem="sMN-Ys-Uvx" firstAttribute="height" secondItem="KxE-RD-SRg" secondAttribute="height" multiplier="0.3" id="ODA-HS-iIm"/>
+                            <constraint firstItem="SHW-ka-oRg" firstAttribute="top" secondItem="KxE-RD-SRg" secondAttribute="top" constant="10" id="Oqr-eK-iVW"/>
+                            <constraint firstItem="KxE-RD-SRg" firstAttribute="trailing" secondItem="SHW-ka-oRg" secondAttribute="trailing" constant="10" id="StT-HV-w3A"/>
+                            <constraint firstItem="Jmw-9d-lkd" firstAttribute="height" secondItem="KxE-RD-SRg" secondAttribute="height" multiplier="0.3" id="WnG-9x-hnt"/>
+                            <constraint firstItem="sMN-Ys-Uvx" firstAttribute="leading" secondItem="KxE-RD-SRg" secondAttribute="leading" constant="10" id="YUS-3x-hc9"/>
+                            <constraint firstItem="KxE-RD-SRg" firstAttribute="trailing" secondItem="Jmw-9d-lkd" secondAttribute="trailing" constant="10" id="ZNm-DA-xbP"/>
+                            <constraint firstItem="Jmw-9d-lkd" firstAttribute="top" secondItem="SHW-ka-oRg" secondAttribute="bottom" constant="10" id="bNM-cY-bbc"/>
+                            <constraint firstItem="sMN-Ys-Uvx" firstAttribute="top" secondItem="Jmw-9d-lkd" secondAttribute="bottom" constant="10" id="mnQ-JN-wGp"/>
+                            <constraint firstItem="SHW-ka-oRg" firstAttribute="leading" secondItem="KxE-RD-SRg" secondAttribute="leading" constant="10" id="qG9-1g-F6u"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="KxE-RD-SRg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Treatments" image="doseFilled" id="U3W-bI-SQ4"/>
+                    <navigationItem key="navigationItem" title="Treatments" id="b2n-jn-1Kk"/>
+                    <connections>
+                        <outlet property="cardNum1" destination="SHW-ka-oRg" id="gNJ-7o-pdv"/>
+                        <outlet property="cardNum2" destination="Jmw-9d-lkd" id="oxH-hR-N6z"/>
+                        <outlet property="cardNum3" destination="sMN-Ys-Uvx" id="MAY-gs-lyv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwm-hQ-TUw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686.9565217391305" y="1485.9375"/>
+            <point key="canvasLocation" x="2511.594202898551" y="1485.9375"/>
         </scene>
         <!--LottieVC-->
         <scene sceneID="IIH-tu-Jgj">
@@ -899,10 +1027,11 @@ It is important to ensure you look after your nails properly and practise good f
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="vR5-al-csf"/>
                     </view>
+                    <navigationItem key="navigationItem" id="nkZ-82-9ph"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIr-E5-Tyy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2439" y="1486"/>
+            <point key="canvasLocation" x="6645" y="51"/>
         </scene>
         <!--Home-->
         <scene sceneID="Axo-rc-pEc">
@@ -951,11 +1080,11 @@ It is important to ensure you look after your nails properly and practise good f
             <objects>
                 <viewController id="AN6-J6-LQe" customClass="ChildVC" customModule="Scholl_Fungal_Nail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sxz-j1-nGu">
-                        <rect key="frame" x="0.0" y="0.0" width="394" height="204.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="204"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2k-A2-PzY">
-                                <rect key="frame" x="15" y="136" width="30" height="30"/>
+                                <rect key="frame" x="15" y="159.5" width="30" height="30"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YwL-ik-eu6">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -995,13 +1124,13 @@ It is important to ensure you look after your nails properly and practise good f
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treatment Tracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhC-9f-MGd">
-                                <rect key="frame" x="15" y="15" width="364" height="33"/>
+                                <rect key="frame" x="15" y="15" width="364" height="40.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yo4-eQ-o9W">
-                                <rect key="frame" x="271.5" y="138" width="77" height="33"/>
+                                <rect key="frame" x="271.5" y="161.5" width="77" height="33"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="View More"/>
                                 <connections>
@@ -1009,7 +1138,7 @@ It is important to ensure you look after your nails properly and practise good f
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j8i-Kv-6j2">
-                                <rect key="frame" x="15" y="66.5" width="364" height="48"/>
+                                <rect key="frame" x="15" y="74" width="364" height="56.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BI2-Lx-h7M">
                                     <size key="itemSize" width="40" height="60"/>
@@ -1101,7 +1230,7 @@ It is important to ensure you look after your nails properly and practise good f
                                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D92-pr-hkU" userLabel="BottomMask">
-                                                <rect key="frame" x="0.0" y="382.5" width="414" height="382.5"/>
+                                                <rect key="frame" x="0.0" y="382.5" width="414" height="342.5"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UgO-Kw-VwS" userLabel="LeadingMask">
@@ -1121,17 +1250,9 @@ It is important to ensure you look after your nails properly and practise good f
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1k-gB-njf">
-                                                        <rect key="frame" x="20" y="131.5" width="67" height="30"/>
-                                                        <state key="normal" title="Take Tour">
-                                                            <color key="titleColor" red="0.35686274509803922" green="0.5607843137254902" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="takeTourButton:" destination="pBN-tn-1pe" eventType="touchUpInside" id="xwC-lH-1nD"/>
-                                                        </connections>
-                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwa-XJ-MUN">
-                                                        <rect key="frame" x="300" y="131.5" width="74" height="30"/>
+                                                        <rect key="frame" x="20" y="127.5" width="87" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="No Thanks">
                                                             <color key="titleColor" red="0.35686274509803922" green="0.5607843137254902" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -1139,14 +1260,33 @@ It is important to ensure you look after your nails properly and practise good f
                                                             <action selector="noThanksButton:" destination="pBN-tn-1pe" eventType="touchUpInside" id="adP-OE-JOE"/>
                                                         </connections>
                                                     </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toto will diagnose fungal nail conditions and give you the tools to treat it. Let's begin the journey towards happier toes!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opf-Fq-M5Q">
+                                                        <rect key="frame" x="15" y="51" width="364" height="56"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1k-gB-njf">
+                                                        <rect key="frame" x="296" y="127.5" width="78" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="Take Tour">
+                                                            <color key="titleColor" red="0.35686274509803922" green="0.5607843137254902" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="takeTourButton:" destination="pBN-tn-1pe" eventType="touchUpInside" id="xwC-lH-1nD"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="g1k-gB-njf" secondAttribute="bottom" constant="20" id="BGC-8N-sQx"/>
-                                                    <constraint firstAttribute="trailing" secondItem="iwa-XJ-MUN" secondAttribute="trailing" constant="20" id="Hkp-Hj-UVO"/>
+                                                    <constraint firstAttribute="bottom" secondItem="iwa-XJ-MUN" secondAttribute="bottom" constant="20" id="39N-gN-LiI"/>
+                                                    <constraint firstAttribute="bottom" secondItem="g1k-gB-njf" secondAttribute="bottom" constant="20" id="Lte-te-Wy2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="opf-Fq-M5Q" secondAttribute="trailing" constant="15" id="Uw2-VE-F7P"/>
+                                                    <constraint firstItem="iwa-XJ-MUN" firstAttribute="leading" secondItem="Opu-4v-sVo" secondAttribute="leading" constant="20" id="Wpf-k5-WPK"/>
                                                     <constraint firstItem="Tvf-9s-Y0N" firstAttribute="top" secondItem="Opu-4v-sVo" secondAttribute="top" constant="15" id="ZjB-6w-Acw"/>
-                                                    <constraint firstAttribute="bottom" secondItem="iwa-XJ-MUN" secondAttribute="bottom" constant="20" id="bpf-NQ-vbH"/>
-                                                    <constraint firstItem="g1k-gB-njf" firstAttribute="leading" secondItem="Opu-4v-sVo" secondAttribute="leading" constant="20" id="epA-SQ-ZnW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="g1k-gB-njf" secondAttribute="trailing" constant="20" id="ccS-gd-8Xa"/>
+                                                    <constraint firstItem="opf-Fq-M5Q" firstAttribute="top" secondItem="Tvf-9s-Y0N" secondAttribute="bottom" constant="10" id="eeJ-e1-KtA"/>
+                                                    <constraint firstItem="opf-Fq-M5Q" firstAttribute="leading" secondItem="Opu-4v-sVo" secondAttribute="leading" constant="15" id="nr2-SM-2Ds"/>
                                                     <constraint firstItem="Tvf-9s-Y0N" firstAttribute="leading" secondItem="Opu-4v-sVo" secondAttribute="leading" constant="15" id="nvW-OK-A0e"/>
                                                 </constraints>
                                             </view>
@@ -1160,7 +1300,8 @@ It is important to ensure you look after your nails properly and practise good f
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgl-rv-5dT">
-                                                        <rect key="frame" x="311" y="131.5" width="63" height="30"/>
+                                                        <rect key="frame" x="300" y="127.5" width="74" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="Compare">
                                                             <color key="titleColor" red="0.35686274509803922" green="0.5607843137254902" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -1355,7 +1496,8 @@ It is important to ensure you look after your nails properly and practise good f
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gV5-qm-aw4">
-                                <rect key="frame" x="301" y="131" width="73" height="30"/>
+                                <rect key="frame" x="288" y="127" width="86" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="View More">
                                     <color key="titleColor" red="0.35686274509999999" green="0.56078431370000004" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -1391,13 +1533,36 @@ It is important to ensure you look after your nails properly and practise good f
             </objects>
             <point key="canvasLocation" x="3303" y="-1141"/>
         </scene>
+        <!--Treatments-->
+        <scene sceneID="M88-VA-DpB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3sz-yp-aPN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Treatments" image="doseFilled" id="U3W-bI-SQ4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OXn-Zz-P69">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.61568627450000002" green="0.86274509799999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Mkq-Ne-eQO" kind="relationship" relationship="rootViewController" id="mS0-4r-D8B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nld-ov-ZgO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686.9565217391305" y="1485.9375"/>
+        </scene>
     </scenes>
     <resources>
         <image name="camera" catalog="system" width="64" height="48"/>
+        <image name="canespro" width="553" height="750"/>
         <image name="doseFilled" width="25" height="25"/>
         <image name="homeFilled" width="25" height="25"/>
         <image name="listFilled" width="25" height="25"/>
         <image name="pinFilled" width="25" height="25"/>
+        <image name="scholl_product_1" width="500" height="500"/>
+        <image name="scholl_product_2" width="500" height="500"/>
         <image name="totofoot2" width="945" height="945"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

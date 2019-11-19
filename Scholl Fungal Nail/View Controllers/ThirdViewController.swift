@@ -38,6 +38,7 @@ class ThirdViewController: UIViewController {
     var previousLocation: CLLocation?
     var locationArray: [MKMapItem?] = []
     var searchString = "Pharmacy"
+    var selectedMapItem: MKMapItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,6 +112,24 @@ class ThirdViewController: UIViewController {
             for item in response!.mapItems {
                 self.locationArray.append(item)
                 self.addPinToMapView(title: item.name, latitude: item.placemark.location!.coordinate.latitude, longitude: item.placemark.location!.coordinate.longitude)
+
+//                let x = self.locationArray.sorted { (MKMapItem1, MKMapItem2) -> Bool in
+//                    Int((MKMapItem1?.placemark.location?.distance(from: self.previousLocation!))!) > Int((MKMapItem2?.placemark.location?.distance(from: self.previousLocation!))!)
+//                }
+
+                //                self.locationArray.sorted { (MKMapItem1, MKMapItem2) -> Bool in
+                //                    MKMapItem1?.placemark.location?.distance(from: self.previousLocation) > MKMapItem2?.placemark.location?.distance(from: self.previousLocation)
+                //                }
+                //                self.locationArray.sorted { (MKMapItem1, MKMapItem2) -> Bool in
+                //
+                //                    let coordinateA = CLLocation(latitude: (MKMapItem1?.placemark.coordinate.latitude)!, longitude: (MKMapItem1?.placemark.coordinate.longitude)!)
+                //
+                //                    let coordinateB = CLLocation(latitude: (MKMapItem2?.placemark.coordinate.latitude)!, longitude: (MKMapItem2?.placemark.coordinate.longitude)!)
+                //
+                //                    let distFromCoordinateA = self.previousLocation?.distance(from: coordinateA)
+                //                    let distFromCoordinateB = self.previousLocation?.distance(from: coordinateB)
+                //
+                //                    return Int(distFromCoordinateA!) > Int(distFromCoordinateB!)
             }
 
             self.tableView.reloadData()
@@ -172,13 +191,23 @@ extension ThirdViewController: MKMapViewDelegate {
                 return
             }
 
-            let streetNumber = placemark.subThoroughfare ?? ""
-            let streetName = placemark.thoroughfare ?? ""
+//            let streetNumber = placemark.subThoroughfare ?? ""
+//            let streetName = placemark.thoroughfare ?? ""
 
             //self?.addressLavel.text = "\(streetNumber) \(streetName)"
 
         }
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mapDetail" {
+            guard let viewController = segue.destination as? MapDetailVC else {
+                return
+            }
+            viewController.mapItem = selectedMapItem
+        }
+    }
+
 }
 
 extension ThirdViewController: UITableViewDelegate, UITableViewDataSource {
@@ -188,20 +217,55 @@ extension ThirdViewController: UITableViewDelegate, UITableViewDataSource {
         return locationArray.count
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80.0;//Choose your custom row height
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath) as? LocationTableViewCell
 
+        let coordinate1Lat = locationArray[indexPath.row]?.placemark.coordinate.latitude
+        let coordinate1Long = locationArray[indexPath.row]?.placemark.coordinate.longitude
+        let coordinate1 = CLLocation(latitude: coordinate1Lat!, longitude: coordinate1Long!)
+        let coordinate2 = previousLocation
+        let distanceInMeters = coordinate1.distance(from: coordinate2!)
+        let distanceInKilometers = distanceInMeters/1000
+
         cell?.locationLabel.text = locationArray[indexPath.row]?.name
-        cell?.phoneNumberLabel.text = locationArray[indexPath.row]?.phoneNumber
-        cell?.urlNumberLabel.text = locationArray[indexPath.row]?.url?.path
+        cell?.phoneNumberLabel.text = String(Double(round(100*distanceInKilometers)/100)) + "KM"
+
+        let streetNumber = locationArray[indexPath.row]?.placemark.subThoroughfare ?? ""
+        let streetName = locationArray[indexPath.row]?.placemark.thoroughfare
+
+        cell?.urlNumberLabel.text = "\(streetNumber) \(streetName!)"
+
+        selectedMapItem = locationArray[indexPath.row]
+
 //        locationArray[indexPath.row]?.openInMaps(launchOptions: [String : Any]?)
-        print(locationArray[indexPath.row]?.placemark.title)
-        //print(locationArray[indexPath.row]?.placemark.subtitle)
+//        print(locationArray[indexPath.row]?.placemark.title)
+//        print(locationArray[indexPath.row]?.placemark.subtitle)
+//        print(locationArray[indexPath.row]?.name)
 //        print(locationArray[indexPath.row]?.placemark.countryCode)
 //        print(locationArray[indexPath.row]?.placemark.coordinate)
 //        print(locationArray[indexPath.row]?.pointOfInterestCategory)
+//        print(locationArray[indexPath.row]?.placemark.subThoroughfare)
+//        print(locationArray[indexPath.row]?.placemark.thoroughfare)
+//        print(locationArray[indexPath.row]?.placemark.locality)
+//        print(locationArray[indexPath.row]?.placemark.subLocality)
+//        print(locationArray[indexPath.row]?.placemark.postalCode)
+//        print(locationArray[indexPath.row]?.url?.path)
+
+
+
+//        print("Distance in meters: \(distanceInMeters)")
+
         return cell!
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "mapDetail", sender: nil)
+        //print(indexPath.row)
     }
     
 }

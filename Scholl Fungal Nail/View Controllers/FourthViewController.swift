@@ -8,38 +8,41 @@
 
 import UIKit
 
-class FourthViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class FourthViewController: UIViewController {
 
-    let productName = ["Product 1", "Product 2", "Product 3"]
-    let productImages = [UIImage(named: "1"),UIImage(named: "2"),UIImage(named: "3")]
-    let productDescription = ["Product 1 long description text as an example for the prototype", "Product 2 long description text as an example for the prototype","Product 3 long description text as an example for the prototype"]
+    @IBOutlet weak var cardNum1: UIView!
+    @IBOutlet weak var cardNum2: UIView!
+    @IBOutlet weak var cardNum3: UIView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        setCardShadows()
     }
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return productName.count
-    }
+        func setCardShadows() {
+            cardNum1.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+            cardNum1.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+            cardNum1.layer.shadowOpacity = 1.0
+            cardNum1.layer.shadowRadius = 0.0
+            cardNum1.layer.masksToBounds = false
+            cardNum1.layer.cornerRadius = 4.0
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CustomCollectionViewCell
+            cardNum2.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+            cardNum2.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+            cardNum2.layer.shadowOpacity = 1.0
+            cardNum2.layer.shadowRadius = 0.0
+            cardNum2.layer.masksToBounds = false
+            cardNum2.layer.cornerRadius = 4.0
 
-        cell.productImage.image = productImages[indexPath.row]
-        cell.productTitle.text = productName[indexPath.row]
-        cell.productDescription.text = productDescription[indexPath.row]
+            cardNum3.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+            cardNum3.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+            cardNum3.layer.shadowOpacity = 1.0
+            cardNum3.layer.shadowRadius = 0.0
+            cardNum3.layer.masksToBounds = false
+            cardNum3.layer.cornerRadius = 4.0
 
-        cell.contentView.layer.cornerRadius = 4.0
-        cell.contentView.layer.borderWidth = 1.0
-        cell.contentView.layer.borderColor = UIColor.clear.cgColor
-        cell.contentView.layer.masksToBounds = false
-        cell.layer.shadowColor = UIColor.gray.cgColor
-        cell.layer.shadowOffset = CGSize(width: 0, height: 1)
-        cell.layer.shadowRadius = 4.0
-        cell.layer.shadowOpacity = 1.0
-        cell.layer.masksToBounds = false
-        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+        }
 
-        return cell
-    }
 }

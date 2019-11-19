@@ -37,13 +37,13 @@ class QuestionBank {
         list.append(Question(text: "Fingernail fungus is just as common.", correctAnswer: false))
 
         //TODO: - Update below questions
-        list.append(Question(text: "Buzz Aldrin\'s mother\'s maiden name was \"Moon\".", correctAnswer: true))
+        list.append(Question(text: "People with diabetes are more likely to get fungal nail.", correctAnswer: true))
 
-        list.append(Question(text: "The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.", correctAnswer: false))
+        list.append(Question(text: "Sharing nail clippers will not increase my risk of fungal nail", correctAnswer: false))
 
-        list.append(Question(text: "No piece of square dry paper can be folded in half more than 7 times.", correctAnswer: false))
+        list.append(Question(text: "It can take several months to a year for fungal nail to go away.", correctAnswer: true))
 
-        list.append(Question(text: "Chocolate affects a dog\'s heart and nervous system; a few ounces are enough to kill a small dog.", correctAnswer: true))
+        list.append(Question(text: "onychomycosis is the medical name for fungal nail.", correctAnswer: true))
     }
 
 }
