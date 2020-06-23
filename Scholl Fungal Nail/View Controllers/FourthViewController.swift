@@ -13,6 +13,9 @@ class FourthViewController: UIViewController {
     @IBOutlet weak var cardNum1: UIView!
     @IBOutlet weak var cardNum2: UIView!
     @IBOutlet weak var cardNum3: UIView!
+    @IBAction func viewProduct1(_ sender: UIButton) {
+        performSegue(withIdentifier: "productDetail", sender: nil)
+    }
     
 
     override func viewDidLoad() {
@@ -44,5 +47,13 @@ class FourthViewController: UIViewController {
             cardNum3.layer.cornerRadius = 4.0
 
         }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "productDetail" {
+            guard let viewController = segue.destination as? FourthViewController else {
+                return
+            }
+        }
+    }
 
 }

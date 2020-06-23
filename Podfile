@@ -11,5 +11,6 @@ target 'Scholl Fungal Nail' do
   pod 'SwiftLint'
   pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
   pod 'lottie-ios'
+  pod 'Cosmos', '~> 20.0'
 
 end
